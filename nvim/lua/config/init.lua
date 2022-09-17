@@ -3,6 +3,7 @@ local opt = vim.opt
 local g = vim.g
 
 -- Neovim Options
+opt.background = "dark"
 opt.completeopt = {'menuone', 'noinsert', 'noselect'}  -- Completion options (for deoplete)
 opt.expandtab = true                                   -- Use spaces instead of tabs
 opt.hidden = true                                      -- Enable background buffers

@@ -23,6 +23,9 @@ require('packer').startup(function(use)
   use 'hrsh7th/cmp-cmdline'
   use "ray-x/lsp_signature.nvim" -- Show Function Signature while entering parameters
 
+  -- Keybindings
+  use 'folke/which-key.nvim'
+
   -- Git Integration
   use 'tpope/vim-fugitive'
   use 'mhinz/vim-signify'
@@ -113,6 +116,8 @@ require('packer').startup(function(use)
   require 'plugins.lsp_config.cmp'
   require 'plugins.lsp_config.diagnostics'
   require 'plugins.lualine'
+  require 'plugins.whichkey'
+  require 'plugins.tokyonight'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

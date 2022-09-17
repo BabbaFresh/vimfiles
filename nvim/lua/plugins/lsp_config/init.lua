@@ -17,3 +17,4 @@ end
 
 require 'plugins.lsp_config.diagnostics'
 require 'plugins.lsp_config.cmp'
+require 'plugins.lsp_config.lsp_signature'
