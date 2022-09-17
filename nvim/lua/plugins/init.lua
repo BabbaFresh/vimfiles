@@ -23,6 +23,9 @@ require('packer').startup(function(use)
   use 'hrsh7th/cmp-cmdline'
   use "ray-x/lsp_signature.nvim" -- Show Function Signature while entering parameters
 
+  -- Testing Integration
+  use 'walialu/jest.nvim'
+
   -- Keybindings
   use 'folke/which-key.nvim'
 
@@ -46,24 +49,6 @@ require('packer').startup(function(use)
   -- Telescope
   use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' } }
   use { 'nvim-telescope/telescope-symbols.nvim', requires = { 'nvim-telescope/telescope.nvim' } }
-
-
- -- Syntax highlightning --
-
-    -- Typescript syntax highlighting
-    use 'HerringtonDarkholme/yats.vim'
-
-    -- ReactJS JSX syntax highlighting
-    use 'mxw/vim-jsx'
-
-    -- Syntax highlighting for nginx
-    use 'chr4/nginx.vim'
-
-    -- Syntax highlighting for javascript libraries
-    use 'othree/javascript-libraries-syntax.vim'
-
-    -- Improved syntax highlighting and indentation
-    use 'othree/yajs.vim'
 
   -- UI --
 
