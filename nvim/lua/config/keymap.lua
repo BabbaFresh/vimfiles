@@ -12,7 +12,7 @@ map('n', '<leader>q', ':q<CR>')
 map('n', '<C-p>', ':Files<CR>')
 
 -- Replacement for ctrlp
-map('n', 'be', ':BufExplorer<CR>')
+map('n', '<leader>be', ':BufExplorer<CR>')
 
 -- Quickly swap between two files
 map('n', '<space>', ':b#<CR>')
