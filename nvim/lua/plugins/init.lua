@@ -50,6 +50,11 @@ require('packer').startup(function(use)
   use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' } }
   use { 'nvim-telescope/telescope-symbols.nvim', requires = { 'nvim-telescope/telescope.nvim' } }
 
+  -- Syntax highlighting --
+
+    -- Terraform
+    use 'hashivim/vim-terraform'
+
   -- UI --
 
     -- Colorscheme
