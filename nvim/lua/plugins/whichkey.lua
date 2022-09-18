@@ -23,3 +23,10 @@ wk.register({
   }
 }, { prefix = "<leader>" })
 
+wk.register({
+  x = {
+    name = "Run",
+    x = { "<Cmd>JestIntegrated<CR>", "Jest integrated test" },
+  }
+}, { prefix = "<leader>" })
+
