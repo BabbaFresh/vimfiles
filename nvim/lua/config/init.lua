@@ -27,6 +27,7 @@ opt.wrap = false                                       -- This option changes ho
 opt.undofile = true                                    -- Save undo history
 opt.timeoutlen = 500                                   -- Time in milliseconds to wait for a mapped sequence to complete.
 opt.clipboard = 'unnamedplus'
+g.vim_markdown_folding_disabled = 1                    -- Disable markdown folding
 
 -- Colorscheme
 cmd 'colorscheme tokyonight'
