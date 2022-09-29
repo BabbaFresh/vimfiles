@@ -22,6 +22,10 @@ require('packer').startup(function(use)
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-cmdline'
   use "ray-x/lsp_signature.nvim" -- Show Function Signature while entering parameters
+  use "github/copilot.vim"
+
+  -- Snippets
+  use 'hrsh7th/vim-vsnip'
 
   -- Testing Integration
   use 'walialu/jest.nvim'
