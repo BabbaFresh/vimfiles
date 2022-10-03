@@ -22,6 +22,7 @@ require('packer').startup(function(use)
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-cmdline'
   use "ray-x/lsp_signature.nvim" -- Show Function Signature while entering parameters
+  use { "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons" } -- Show LSP diagnostics in a floating window
   use "github/copilot.vim"
 
   -- Snippets
