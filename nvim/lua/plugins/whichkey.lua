@@ -8,6 +8,7 @@ wk.register({
     i = { "<Cmd>lua require('telescope.builtin').lsp_implementations()<CR>", "Implementations" },
     r = { "<Cmd>lua require('telescope.builtin').lsp_references()<CR>", "References" },
     t = { "<Cmd>lua require('telescope.builtin').lsp_type_definitions()<CR>", "Type Definitions" },
+    g = { "<Cmd>lua require('telescope.builtin').live_grep()<CR>", "Live Grep"},
     k = { "<Cmd>lua vim.lsp.buf.hover()<CR>", "Show Function Docs" }
   },
 })
@@ -19,7 +20,7 @@ wk.register({
     w = { "<Cmd>TroubleToggle workspace_diagnostics<CR>", "Workspace Diagnostics" },
     d = { "<Cmd>TroubleToggle document_diagnostics<CR>", "Document Diagnostics" },
   },
-}, { prefix = "<leader>" })
+})
 
 
 wk.register({
