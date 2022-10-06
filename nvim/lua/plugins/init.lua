@@ -44,10 +44,6 @@ require('packer').startup(function(use)
   -- Trailing whitespace highlighting & automatic fixing
   use 'ntpeters/vim-better-whitespace'
 
-  -- fzf - Fuzzy finding, buffer management
-  use 'junegunn/fzf'
-  use 'junegunn/fzf.vim'
-
   -- Jump to any location specified by two characters.
   use 'justinmk/vim-sneak'
 
