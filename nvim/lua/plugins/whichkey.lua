@@ -20,7 +20,7 @@ wk.register({
     w = { "<Cmd>TroubleToggle workspace_diagnostics<CR>", "Workspace Diagnostics" },
     d = { "<Cmd>TroubleToggle document_diagnostics<CR>", "Document Diagnostics" },
   },
-})
+}, { prefix = "<leader>" })
 
 
 wk.register({
