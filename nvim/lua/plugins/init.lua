@@ -93,6 +93,9 @@ require('packer').startup(function(use)
   -- Add Golang support
   use { 'fatih/vim-go', run = ':GoUpdateBinaries' }
 
+  -- Add Rust support
+  use 'simrat39/rust-tools.nvim'
+
   -- Add Markdown support
   use { 'plasticboy/vim-markdown', ft = {'markdown'} }
 
