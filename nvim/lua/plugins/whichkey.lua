@@ -16,6 +16,11 @@ wk.register({
   g = {
     name = "Search",
       g = { "<Cmd>lua require('telescope.builtin').live_grep()<CR>", "Live Grep"},
+      s = {
+        name = "Symbols",
+        d = { "<Cmd>lua require('telescope.builtin').lsp_document_symbols()<CR>", "Document Symbols" },
+        w = { "<Cmd>lua require('telescope.builtin').lsp_workspace_symbols()<CR>", "Workspace Symbols" }
+      }
   },
 }, { prefix = "<leader>" })
 
