@@ -14,7 +14,6 @@ local packer_bootstrap = ensure_packer()
 -- Install Plugins
 require('packer').startup(function(use)
   -- Code Analysis
-  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use 'neovim/nvim-lspconfig'
   use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
   use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
@@ -55,6 +54,13 @@ require('packer').startup(function(use)
 
     -- Terraform
     use 'hashivim/vim-terraform'
+
+    use { -- Highlight, edit, and navigate code
+      'nvim-treesitter/nvim-treesitter',
+      run = function()
+        pcall(require('nvim-treesitter.install').update { with_sync = true })
+      end,
+    }
 
   -- UI --
 
@@ -110,6 +116,7 @@ require('packer').startup(function(use)
   require 'plugins.lsp_config.cmp'
   require 'plugins.lsp_config.diagnostics'
   require 'plugins.lualine'
+  require 'plugins.treesitter'
   require 'plugins.whichkey'
   require 'plugins.tokyonight'
 
