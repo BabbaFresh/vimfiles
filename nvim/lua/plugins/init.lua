@@ -1,128 +1,123 @@
-local ensure_packer = function()
-  local fn = vim.fn
-  local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
-  if fn.empty(fn.glob(install_path)) > 0 then
-    fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
-    vim.cmd [[packadd packer.nvim]]
-    return true
-  end
-  return false
+-- Bootstrapping lazy.nvim
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
 end
-
-local packer_bootstrap = ensure_packer()
+vim.opt.rtp:prepend(lazypath)
 
 -- Install Plugins
-require('packer').startup(function(use)
+require('lazy').setup({
   -- Code Analysis
-  use 'neovim/nvim-lspconfig'
-  use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
-  use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
-  use 'hrsh7th/cmp-buffer'
-  use 'hrsh7th/cmp-path'
-  use 'hrsh7th/cmp-cmdline'
-  use "ray-x/lsp_signature.nvim" -- Show Function Signature while entering parameters
-  use { "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons" } -- Show LSP diagnostics in a floating window
-  use "github/copilot.vim"
+  'neovim/nvim-lspconfig',
+  'hrsh7th/nvim-cmp', -- Autocompletion plugin
+  'hrsh7th/cmp-nvim-lsp', -- LSP source for nvim-cmp
+  'hrsh7th/cmp-buffer',
+  'hrsh7th/cmp-path',
+  'hrsh7th/cmp-cmdline',
+  "ray-x/lsp_signature.nvim", -- Show Function Signature while entering parameters
+  { "folke/trouble.nvim", dependencies = {"kyazdani42/nvim-web-devicons"} }, -- Show LSP diagnostics in a floating window
+  "github/copilot.vim",
 
   -- Snippets
-  use 'hrsh7th/vim-vsnip'
+  'hrsh7th/vim-vsnip',
 
   -- Testing Integration
-  use 'walialu/jest.nvim'
+  'walialu/jest.nvim',
 
   -- Keybindings
-  use 'folke/which-key.nvim'
+  'folke/which-key.nvim',
 
   -- Git Integration
-  use 'tpope/vim-fugitive'
-  use 'mhinz/vim-signify'
+  'tpope/vim-fugitive',
+  'mhinz/vim-signify',
 
   -- BufExplorer, Buffers management on steroids
-  use 'jlanzarotta/bufexplorer'
+  'jlanzarotta/bufexplorer',
 
   -- Trailing whitespace highlighting & automatic fixing
-  use 'ntpeters/vim-better-whitespace'
+  'ntpeters/vim-better-whitespace',
 
   -- Jump to any location specified by two characters.
-  use 'justinmk/vim-sneak'
+  'justinmk/vim-sneak',
 
   -- Telescope
-  use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' } }
-  use { 'nvim-telescope/telescope-symbols.nvim', requires = { 'nvim-telescope/telescope.nvim' } }
+  { 'nvim-telescope/telescope.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
+  { 'nvim-telescope/telescope-symbols.nvim', dependencies = { 'nvim-telescope/telescope.nvim' } },
 
   -- Syntax highlighting --
 
     -- Terraform
-    use 'hashivim/vim-terraform'
+    'hashivim/vim-terraform',
 
-    use { -- Highlight, edit, and navigate code
+    { -- Highlight, edit, and navigate code
       'nvim-treesitter/nvim-treesitter',
-      run = function()
+      build = function()
         pcall(require('nvim-treesitter.install').update { with_sync = true })
       end,
-    }
+    },
 
   -- UI --
 
     -- Colorscheme
-    use 'folke/tokyonight.nvim'
+    'folke/tokyonight.nvim',
 
     -- File explorer
-    use 'scrooloose/nerdtree'
+    'scrooloose/nerdtree',
 
     -- Customized vim status line
-    use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
+    { 'nvim-lualine/lualine.nvim', dependencies = { 'kyazdani42/nvim-web-devicons', opt = true } },
 
     -- Icons
-    use 'ryanoasis/vim-devicons'
-    use 'tiagofumo/vim-nerdtree-syntax-highlight'
+    'ryanoasis/vim-devicons',
+    'tiagofumo/vim-nerdtree-syntax-highlight',
 
     -- Tagbar replacement
-    use 'liuchengxu/vista.vim'
+    'liuchengxu/vista.vim',
 
   -- Quickly swapping text with visual mode and motion command cx
-  use 'tommcdo/vim-exchange'
+  'tommcdo/vim-exchange',
 
   -- Comments
-  use 'tpope/vim-commentary'
+  'tpope/vim-commentary',
 
   -- Repeat
-  use 'tpope/vim-repeat'
+  'tpope/vim-repeat',
 
   -- Easily surround stuff
-  use 'tpope/vim-surround'
+  'tpope/vim-surround',
 
   -- Tim Pope stuff
-  use 'tpope/vim-unimpaired'
-  use 'tpope/vim-rhubarb'
+  'tpope/vim-unimpaired',
+  'tpope/vim-rhubarb',
 
   -- Add Golang support
-  use { 'fatih/vim-go', run = ':GoUpdateBinaries' }
+  { 'fatih/vim-go', build = ':GoUpdateBinaries' },
 
   -- Add Rust support
-  use 'simrat39/rust-tools.nvim'
+  'simrat39/rust-tools.nvim',
 
   -- Add Markdown support
-  use { 'plasticboy/vim-markdown', ft = {'markdown'} }
+  { 'plasticboy/vim-markdown', ft = {'markdown'} },
 
   -- Add EditorConfig support
-  use 'editorconfig/editorconfig-vim'
+  'editorconfig/editorconfig-vim',
 
-  use { 'cespare/vim-toml', ft = {'toml'} }
-  use { 'StanAngeloff/php.vim', ft = {'php'} }
+  { 'cespare/vim-toml', ft = {'toml'} },
+  { 'StanAngeloff/php.vim', ft = {'php'} }
+})
 
-  -- Plugin Configuration
-  require 'plugins.lsp_config'
-  require 'plugins.lsp_config.cmp'
-  require 'plugins.lsp_config.diagnostics'
-  require 'plugins.lualine'
-  require 'plugins.treesitter'
-  require 'plugins.whichkey'
-  require 'plugins.tokyonight'
-
-  -- Automatically set up your configuration after cloning packer.nvim
-  -- Put this at the end after all plugins
-  if packer_bootstrap then
-    require('packer').sync()
-  end
-end)
+-- Plugin Configuration
+require 'plugins.lsp_config'
+require 'plugins.lsp_config.cmp'
+require 'plugins.lsp_config.diagnostics'
+require 'plugins.lualine'
+require 'plugins.treesitter'
+require 'plugins.whichkey'
+require 'plugins.tokyonight'
