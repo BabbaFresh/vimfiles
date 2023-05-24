@@ -66,13 +66,13 @@ require('lazy').setup({
   -- UI --
 
     -- Colorscheme
-    'folke/tokyonight.nvim',
+    'loctvl842/monokai-pro.nvim',
 
     -- File explorer
     'scrooloose/nerdtree',
 
     -- Customized vim status line
-    { 'nvim-lualine/lualine.nvim', dependencies = { 'kyazdani42/nvim-web-devicons', opt = true } },
+    { 'nvim-lualine/lualine.nvim', dependencies = { 'kyazdani42/nvim-web-devicons', optional = true } },
 
     -- Icons
     'ryanoasis/vim-devicons',
@@ -120,4 +120,4 @@ require 'plugins.lsp_config.diagnostics'
 require 'plugins.lualine'
 require 'plugins.treesitter'
 require 'plugins.whichkey'
-require 'plugins.tokyonight'
+require 'plugins.monokaipro'
