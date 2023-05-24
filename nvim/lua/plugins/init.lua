@@ -74,9 +74,6 @@ require('lazy').setup({
     -- Customized vim status line
     { 'nvim-lualine/lualine.nvim', dependencies = { 'kyazdani42/nvim-web-devicons' } },
 
-    -- Tagbar replacement
-    'liuchengxu/vista.vim',
-
   -- Quickly swapping text with visual mode and motion command cx
   'tommcdo/vim-exchange',
 
