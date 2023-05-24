@@ -101,7 +101,7 @@ require('lazy').setup({
 
   -- Add Markdown support
   { 'plasticboy/vim-markdown', ft = {'markdown'} },
-  { 'toppair/peek.nvim', ft = {'markdown'}, config = function() require('plugins.peek') end },
+  { 'toppair/peek.nvim', ft = {'markdown'}, build = 'deno task --quiet build:fast', config = function() require('plugins.peek') end },
 
   -- Add EditorConfig support
   'editorconfig/editorconfig-vim',
