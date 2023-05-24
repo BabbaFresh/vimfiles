@@ -27,6 +27,7 @@ wk.register({
 wk.register({
   d = {
     name = "Debug",
+    e = { "<Cmd>lua vim.diagnostic.open_float(0, {scope='line'})<CR>", "Show error in float" },
     w = { "<Cmd>TroubleToggle workspace_diagnostics<CR>", "Workspace Diagnostics" },
     d = { "<Cmd>TroubleToggle document_diagnostics<CR>", "Document Diagnostics" },
   },

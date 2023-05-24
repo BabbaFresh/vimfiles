@@ -18,7 +18,7 @@ map('n', '<leader>be', ':BufExplorer<CR>')
 map('n', '<space>', ':b#<CR>')
 
 -- File Explorer
-map('n', '<leader>E', ':NERDTreeToggle<CR>')
+map('n', '<leader>E', ':NvimTreeToggle<CR>')
 
 -- Telescope symbols
 --https://github.com/nvim-telescope/telescope-symbols.nvim

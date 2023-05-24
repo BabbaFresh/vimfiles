@@ -22,7 +22,7 @@ require('lazy').setup({
   'hrsh7th/cmp-path',
   'hrsh7th/cmp-cmdline',
   "ray-x/lsp_signature.nvim", -- Show Function Signature while entering parameters
-  { "folke/trouble.nvim", dependencies = {"kyazdani42/nvim-web-devicons"} }, -- Show LSP diagnostics in a floating window
+  { "folke/trouble.nvim", dependencies = { 'kyazdani42/nvim-web-devicons' } }, -- Show LSP diagnostics in a floating window
   "github/copilot.vim",
 
   -- Snippets
@@ -69,14 +69,10 @@ require('lazy').setup({
     'loctvl842/monokai-pro.nvim',
 
     -- File explorer
-    'scrooloose/nerdtree',
+    { 'nvim-tree/nvim-tree.lua', dependencies = { 'kyazdani42/nvim-web-devicons' } },
 
     -- Customized vim status line
-    { 'nvim-lualine/lualine.nvim', dependencies = { 'kyazdani42/nvim-web-devicons', optional = true } },
-
-    -- Icons
-    'ryanoasis/vim-devicons',
-    'tiagofumo/vim-nerdtree-syntax-highlight',
+    { 'nvim-lualine/lualine.nvim', dependencies = { 'kyazdani42/nvim-web-devicons' } },
 
     -- Tagbar replacement
     'liuchengxu/vista.vim',
@@ -105,6 +101,7 @@ require('lazy').setup({
 
   -- Add Markdown support
   { 'plasticboy/vim-markdown', ft = {'markdown'} },
+  { 'toppair/peek.nvim', ft = {'markdown'}, config = function() require('plugins.peek') end },
 
   -- Add EditorConfig support
   'editorconfig/editorconfig-vim',
@@ -118,6 +115,7 @@ require 'plugins.lsp_config'
 require 'plugins.lsp_config.cmp'
 require 'plugins.lsp_config.diagnostics'
 require 'plugins.lualine'
+require 'plugins.nvimtree'
 require 'plugins.treesitter'
 require 'plugins.whichkey'
 require 'plugins.monokaipro'
