@@ -24,3 +24,4 @@ map('n', '<leader>E', ':NvimTreeToggle<CR>')
 --https://github.com/nvim-telescope/telescope-symbols.nvim
 map('i', '<C-e>', '<esc>:Telescope symbols<CR>')
 
+vim.keymap.set("n", "-", require("oil").open, { desc = "Open parent directory" })

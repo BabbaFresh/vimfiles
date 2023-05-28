@@ -70,6 +70,7 @@ require('lazy').setup({
 
     -- File explorer
     { 'nvim-tree/nvim-tree.lua', dependencies = { 'kyazdani42/nvim-web-devicons' } },
+    { 'stevearc/oil.nvim', dependencies = { 'kyazdani42/nvim-web-devicons' } },
 
     -- Customized vim status line
     { 'nvim-lualine/lualine.nvim', dependencies = { 'kyazdani42/nvim-web-devicons' } },
@@ -112,6 +113,7 @@ require 'plugins.lsp_config'
 require 'plugins.lsp_config.cmp'
 require 'plugins.lsp_config.diagnostics'
 require 'plugins.lualine'
+require 'plugins.oil'
 require 'plugins.nvimtree'
 require 'plugins.treesitter'
 require 'plugins.whichkey'
