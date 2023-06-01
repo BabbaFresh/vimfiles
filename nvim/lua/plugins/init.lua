@@ -37,6 +37,8 @@ require('lazy').setup({
   -- Git Integration
   'tpope/vim-fugitive',
   'mhinz/vim-signify',
+  -- Github Integration
+  'mistweaverco/github.nvim',
 
   -- BufExplorer, Buffers management on steroids
   'jlanzarotta/bufexplorer',
