@@ -11,6 +11,7 @@ wk.register({
         p = { "<Cmd>lua require('githubutils').pulls()<CR>", "Pulls" },
         i = { "<Cmd>lua require('githubutils').issues()<CR>", "Issues" },
         a = { "<Cmd>lua require('githubutils').actions()<CR>", "Actions" },
+        l = { "<Cmd>lua require('githubutils').labels()<CR>", "Labels" },
       },
       s = {
         name = "Symbols",
