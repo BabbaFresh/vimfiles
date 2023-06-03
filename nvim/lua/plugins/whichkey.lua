@@ -6,6 +6,7 @@ wk.register({
       h = {
         name = "Github Utils",
         o = { "<Cmd>lua require('githubutils').open({ v = true })<CR>", "Open" },
+        O = { "<Cmd>lua require('githubutils').open({ v = true, commit = true })<CR>", "Open commit" },
       },
   },
 }, { prefix = "<leader>", mode = "v" })
@@ -17,7 +18,8 @@ wk.register({
       h = {
         name = "Github Utils",
         o = { "<Cmd>lua require('githubutils').open()<CR>", "Open" },
-        O = { "<Cmd>lua require('githubutils').repo()<CR>", "Repo" },
+        O = { "<Cmd>lua require('githubutils').open({ commit = true })<CR>", "Open commit" },
+        r = { "<Cmd>lua require('githubutils').repo()<CR>", "Repo" },
         c = { "<Cmd>lua require('githubutils').commit()<CR>", "Commit" },
         p = { "<Cmd>lua require('githubutils').pulls()<CR>", "Pulls" },
         i = { "<Cmd>lua require('githubutils').issues()<CR>", "Issues" },
