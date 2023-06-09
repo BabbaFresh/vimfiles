@@ -46,8 +46,8 @@ require('lazy').setup({
   -- Trailing whitespace highlighting & automatic fixing
   'ntpeters/vim-better-whitespace',
 
-  -- Jump to any location specified by two characters.
-  'justinmk/vim-sneak',
+   -- Neovim motions on speed!
+  { 'mistweaverco/hop.nvim', config = function() require('plugins.hop') end },
 
   -- Telescope
   { 'nvim-telescope/telescope.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
