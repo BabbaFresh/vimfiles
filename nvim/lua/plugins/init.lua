@@ -57,6 +57,8 @@ require('lazy').setup({
 
     -- Terraform
     'hashivim/vim-terraform',
+    -- mustache and handlebars mode
+    'mustache/vim-mustache-handlebars',
 
     { -- Highlight, edit, and navigate code
       'nvim-treesitter/nvim-treesitter',
