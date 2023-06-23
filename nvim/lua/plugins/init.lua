@@ -47,7 +47,11 @@ require('lazy').setup({
   'ntpeters/vim-better-whitespace',
 
    -- Neovim motions on speed!
-  { 'mistweaverco/hop.nvim', config = function() require('plugins.hop') end },
+  { "folke/flash.nvim", event = "VeryLazy", opts = {}, keys = {
+      { "s", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
+      { "S", mode = { "n", "o", "x" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" }
+    }
+  },
 
   -- Telescope
   { 'nvim-telescope/telescope.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
