@@ -43,6 +43,9 @@ require('lazy').setup({
   -- BufExplorer, Buffers management on steroids
   'jlanzarotta/bufexplorer',
 
+  -- Harpoon, quick access to project files
+  { 'ThePrimeagen/harpoon', dependencies = { 'nvim-lua/plenary.nvim' } },
+
   -- Trailing whitespace highlighting & automatic fixing
   'ntpeters/vim-better-whitespace',
 

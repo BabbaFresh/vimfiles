@@ -7,6 +7,7 @@
   "copilot.vim": { "branch": "release", "commit": "1358e8e45ecedc53daf971924a0541ddf6224faf" },
   "editorconfig-vim": { "branch": "master", "commit": "7f4e4dfc58c480d154116614e616d90aac77204d" },
   "githubutils.nvim": { "branch": "main", "commit": "5e48cba8dbd17c02f5b2531310bf82ab3fd56608" },
+  "harpoon": { "branch": "master", "commit": "21f4c47c6803d64ddb934a5b314dcb1b8e7365dc" },
   "jest.nvim": { "branch": "trunk", "commit": "4a7e5576e442fe4397910b95fa974e7660b8d8b8" },
   "lazy.nvim": { "branch": "main", "commit": "e6bf3a0d9c4899dcf832270f79bb1cee8fbc506e" },
   "leap.nvim": { "branch": "main", "commit": "3cc0e6a0b99dc18d4e5a88baa3cbe3c7b8b34566" },

@@ -8,10 +8,13 @@ map('', 'k', 'gk')
 map('n', '<leader>w', ':w<CR>')
 map('n', '<leader>q', ':q<CR>')
 
+-- Harpoon keymaps
+map('n', '<C-j>', ':lua require("harpoon.ui").toggle_quick_menu()<CR>')
+map('n', '<C-h>', ':lua require("harpoon.mark").add_file()<CR>')
+
 -- Replacement for ctrlp
 map('n', '<C-p>', ':Telescope find_files<CR>')
 
--- Replacement for ctrlp
 map('n', '<leader>be', ':BufExplorer<CR>')
 
 -- Quickly swap between two files
