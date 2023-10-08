@@ -15,7 +15,7 @@ map('n', '<C-h>', ':lua require("harpoon.mark").add_file()<CR>')
 -- Replacement for ctrlp
 map('n', '<C-p>', ':Telescope find_files<CR>')
 
-map('n', '<leader>be', ':BufExplorer<CR>')
+map('n', '<leader>be', ':lua require("bafa.ui").toggle()<CR>')
 
 -- Quickly swap between two files
 map('n', '<space>', ':b#<CR>')

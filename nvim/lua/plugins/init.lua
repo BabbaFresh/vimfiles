@@ -40,8 +40,8 @@ require('lazy').setup({
   -- Github Integration
   { 'mistweaverco/githubutils.nvim', dependencies = { 'nvim-telescope/telescope.nvim' } },
 
-  -- BufExplorer, Buffers management on steroids
-  'jlanzarotta/bufexplorer',
+  -- Bafa, Buffer management on steroids
+  { 'mistweaverco/bafa.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
 
   -- Harpoon, quick access to project files
   { 'ThePrimeagen/harpoon', dependencies = { 'nvim-lua/plenary.nvim' } },
@@ -77,7 +77,7 @@ require('lazy').setup({
 
     -- File explorer
     { 'nvim-tree/nvim-tree.lua', dependencies = { 'kyazdani42/nvim-web-devicons' } },
-    { 'stevearc/oil.nvim', dependencies = { 'kyazdani42/nvim-web-devicons' } },
+    { 'stevearc/oil.nvim', tag = 'v2.2.0', opts = {}, dependencies = { 'kyazdani42/nvim-web-devicons' } },
 
     -- Customized vim status line
     { 'nvim-lualine/lualine.nvim', dependencies = { 'kyazdani42/nvim-web-devicons' } },
