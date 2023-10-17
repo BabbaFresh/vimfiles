@@ -41,7 +41,7 @@ require('lazy').setup({
   { 'mistweaverco/githubutils.nvim', dependencies = { 'nvim-telescope/telescope.nvim' } },
 
   -- Bafa, Buffer management on steroids
-  { 'mistweaverco/bafa.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
+  { 'mistweaverco/bafa.nvim' },
 
   -- Harpoon, quick access to project files
   { 'ThePrimeagen/harpoon', dependencies = { 'nvim-lua/plenary.nvim' } },
@@ -50,7 +50,16 @@ require('lazy').setup({
   'ntpeters/vim-better-whitespace',
 
    -- Neovim motions on speed!
-  { 'ggandor/leap.nvim', config = function() require('leap').add_default_mappings() end },
+  {
+    "folke/flash.nvim",
+    event = "VeryLazy",
+    ---@type Flash.Config
+    opts = {},
+    -- stylua: ignore
+    keys = {
+      { "s", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
+    },
+  },
 
   -- Telescope
   { 'nvim-telescope/telescope.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
