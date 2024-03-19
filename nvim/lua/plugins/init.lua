@@ -53,18 +53,6 @@ require('lazy').setup({
   -- Trailing whitespace highlighting & automatic fixing
   'ntpeters/vim-better-whitespace',
 
-   -- Neovim motions on speed!
-  {
-    "folke/flash.nvim",
-    event = "VeryLazy",
-    ---@type Flash.Config
-    opts = {},
-    -- stylua: ignore
-    keys = {
-      { "s", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
-    },
-  },
-
   -- Telescope
   { 'nvim-telescope/telescope.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
   { 'nvim-telescope/telescope-symbols.nvim', dependencies = { 'nvim-telescope/telescope.nvim' } },
