@@ -29,7 +29,7 @@ require('lazy').setup({
   'hrsh7th/vim-vsnip',
 
   -- Testing Integration
-  'walialu/jest.nvim',
+  { 'mistweaverco/jest.nvim' },
 
   -- Keybindings
   'folke/which-key.nvim',
