@@ -57,6 +57,10 @@ wk.register({
     a = { "<Cmd>lua vim.lsp.buf.code_action()<CR>", "Actions"},
   },
   f = {
+    name = "Format",
+    u = { "<cmd>lua require('umbizo').format()<CR>", "Umbizo" },
+    j = { "<cmd>lua require('umbizo.fmt.jq').format()<CR>", "JQ/JSON" },
+    p = { "<cmd>lua require('umbizo.fmt.prettier').format()<CR>", "Prettier" },
     s = { "<cmd>lua vim.lsp.buf.formatting()<CR>", "LSP Formatting" },
   }
 }, { prefix = "<leader>" })
@@ -65,6 +69,8 @@ wk.register({
   x = {
     name = "Run",
     x = { "<Cmd>JestIntegrated<CR>", "Jest integrated test" },
+    r = { "<Plug>RestNvim<CR>", "run the request under the cursor" },
+    p = { "<Plug>RestNvimPreview<CR>", "preview the request cURL command" },
   }
 }, { prefix = "<leader>" })
 
