@@ -7,6 +7,7 @@ npm install -g yaml-language-server
 npm install -g @angular/language-server
 npm install -g bash-language-server
 npm install -g @tailwindcss/language-server
+npm install -g svelte-language-server
 
 # brew install lua-language-server
 # yay -S lua-language-server
