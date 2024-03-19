@@ -43,6 +43,9 @@ require('lazy').setup({
   -- Bafa, Buffer management on steroids
   { 'mistweaverco/bafa.nvim' },
 
+  -- Bafa, Buffer management on steroids
+  { 'mistweaverco/umbizo.nvim', config = function() require('umbizo').setup() end },
+
   -- Harpoon, quick access to project files
   { 'ThePrimeagen/harpoon', dependencies = { 'nvim-lua/plenary.nvim' } },
 
