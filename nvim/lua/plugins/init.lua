@@ -46,6 +46,10 @@ require('lazy').setup({
   -- Harpoon, quick access to project files
   { 'ThePrimeagen/harpoon', dependencies = { 'nvim-lua/plenary.nvim' } },
 
+  -- Rest Console
+  -- See https://github.com/rest-nvim/rest.nvim?tab=readme-ov-file#packernvim for setup options
+  { 'rest-nvim/rest.nvim', config = function() require('rest-nvim').setup({}) end, dependencies = { 'nvim-lua/plenary.nvim' } },
+
   -- Trailing whitespace highlighting & automatic fixing
   'ntpeters/vim-better-whitespace',
 
