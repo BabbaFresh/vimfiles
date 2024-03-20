@@ -29,7 +29,7 @@ require('lazy').setup({
   'hrsh7th/vim-vsnip',
 
   -- Testing Integration
-  { 'mistweaverco/jest.nvim' },
+  { 'mistweaverco/jest.nvim', dir = "/Users/marco/code/marco/jest.nvim" },
 
   -- Keybindings
   'folke/which-key.nvim',
@@ -44,7 +44,7 @@ require('lazy').setup({
   { 'mistweaverco/bafa.nvim' },
 
   -- Bafa, Buffer management on steroids
-  { 'mistweaverco/umbizo.nvim', config = function() require('umbizo').setup() end },
+  { 'mistweaverco/umbizo.nvim', config = function() require('umbizo').setup() end, dir = "/Users/marco/code/marco/umbizo.nvim" },
 
   -- Harpoon, quick access to project files
   { 'ThePrimeagen/harpoon', dependencies = { 'nvim-lua/plenary.nvim' } },
@@ -101,6 +101,14 @@ require('lazy').setup({
   -- Tim Pope stuff
   'tpope/vim-unimpaired',
   'tpope/vim-rhubarb',
+
+  --Leap is a general-purpose motion plugin for Neovim
+  {
+    'ggandor/leap.nvim',
+    config = function()
+      require('leap').add_default_mappings()
+    end
+  },
 
   -- Add Golang support
   { 'fatih/vim-go', build = ':GoUpdateBinaries' },
