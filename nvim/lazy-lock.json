@@ -9,7 +9,6 @@
   "githubutils.nvim": { "branch": "main", "commit": "f62bd9475ce4ea107e5b439fb198d3f63783b672" },
   "harpoon": { "branch": "master", "commit": "ccae1b9bec717ae284906b0bf83d720e59d12b91" },
   "lazy.nvim": { "branch": "main", "commit": "83493db50a434a4c5c648faf41e2ead80f96e478" },
-  "leap.nvim": { "branch": "main", "commit": "74b2ed7a0fac2fedf191d673f2d0883aab3dfe9c" },
   "lsp_signature.nvim": { "branch": "master", "commit": "c6aeb2f1d2538bbdfdaab1664d9d4c3c75aa9db8" },
   "lualine.nvim": { "branch": "master", "commit": "af4c3cf17206810880d2a93562e0a4c0d901c684" },
   "luarocks.nvim": { "branch": "main", "commit": "dc4f9db72f1ea890e621c6684aea04d565dcac5b" },

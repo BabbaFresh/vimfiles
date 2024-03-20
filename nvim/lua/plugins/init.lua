@@ -112,14 +112,6 @@ require('lazy').setup({
   'tpope/vim-unimpaired',
   'tpope/vim-rhubarb',
 
-  --Leap is a general-purpose motion plugin for Neovim
-  {
-    'ggandor/leap.nvim',
-    config = function()
-      require('leap').create_default_mappings()
-    end
-  },
-
   -- Add Golang support
   { 'fatih/vim-go', build = ':GoUpdateBinaries' },
 
