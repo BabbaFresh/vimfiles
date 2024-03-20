@@ -14,6 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Install Plugins
 require('lazy').setup({
+
   -- Code Analysis
   'neovim/nvim-lspconfig',
   'hrsh7th/nvim-cmp', -- Autocompletion plugin
@@ -22,14 +23,26 @@ require('lazy').setup({
   'hrsh7th/cmp-path',
   'hrsh7th/cmp-cmdline',
   "ray-x/lsp_signature.nvim", -- Show Function Signature while entering parameters
-  { "folke/trouble.nvim", dependencies = { 'kyazdani42/nvim-web-devicons' } }, -- Show LSP diagnostics in a floating window
+
+  -- Show LSP diagnostics
+  {
+    "folke/trouble.nvim",
+    dependencies = {
+      'kyazdani42/nvim-web-devicons'
+    }
+  },
+
+  -- This is 🔥 github copilot
   "github/copilot.vim",
 
   -- Snippets
   'hrsh7th/vim-vsnip',
 
   -- Testing Integration
-  { 'mistweaverco/jest.nvim', dir = "/Users/marco/code/marco/jest.nvim" },
+  {
+    'mistweaverco/jest.nvim',
+    dir = "/Users/marco/code/marco/jest.nvim",
+  },
 
   -- Keybindings
   'folke/which-key.nvim',
@@ -37,17 +50,36 @@ require('lazy').setup({
   -- Git Integration
   'tpope/vim-fugitive',
   'mhinz/vim-signify',
+
   -- Github Integration
-  { 'mistweaverco/githubutils.nvim', dependencies = { 'nvim-telescope/telescope.nvim' } },
+  {
+    'mistweaverco/githubutils.nvim',
+    dependencies = {
+      'nvim-telescope/telescope.nvim'
+    }
+  },
 
-  -- Bafa, Buffer management on steroids
-  { 'mistweaverco/bafa.nvim' },
+  -- Bafa, Buffer management on steroids 💊
+  {
+    'mistweaverco/bafa.nvim'
+  },
 
-  -- Bafa, Buffer management on steroids
-  { 'mistweaverco/umbizo.nvim', config = function() require('umbizo').setup() end, dir = "/Users/marco/code/marco/umbizo.nvim" },
+  -- Umbizo, formatting on steroids 💊
+  {
+    'mistweaverco/umbizo.nvim',
+    config = function()
+      require('umbizo').setup()
+    end,
+    dir = "/Users/marco/code/marco/umbizo.nvim"
+  },
 
   -- Harpoon, quick access to project files
-  { 'ThePrimeagen/harpoon', dependencies = { 'nvim-lua/plenary.nvim' } },
+  {
+    'ThePrimeagen/harpoon',
+    dependencies = {
+      'nvim-lua/plenary.nvim'
+    }
+  },
 
   -- Rest Console
   -- See https://github.com/rest-nvim/rest.nvim?tab=readme-ov-file#packernvim for setup options
@@ -67,34 +99,65 @@ require('lazy').setup({
   'ntpeters/vim-better-whitespace',
 
   -- Telescope
-  { 'nvim-telescope/telescope.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
-  { 'nvim-telescope/telescope-symbols.nvim', dependencies = { 'nvim-telescope/telescope.nvim' } },
+  {
+    'nvim-telescope/telescope.nvim',
+    dependencies = {
+      'nvim-lua/plenary.nvim'
+    }
+  },
+  {
+    'nvim-telescope/telescope-symbols.nvim',
+    dependencies = {
+      'nvim-telescope/telescope.nvim'
+    }
+  },
 
   -- Syntax highlighting --
 
-    -- Terraform
-    'hashivim/vim-terraform',
-    -- mustache and handlebars mode
-    'mustache/vim-mustache-handlebars',
+  -- Terraform
+  'hashivim/vim-terraform',
+  -- mustache and handlebars mode
+  'mustache/vim-mustache-handlebars',
 
-    { -- Highlight, edit, and navigate code
-      'nvim-treesitter/nvim-treesitter',
-      build = function()
-        pcall(require('nvim-treesitter.install').update { with_sync = true })
-      end,
-    },
+  -- Highlight, edit, and navigate code
+  {
+    'nvim-treesitter/nvim-treesitter',
+    build = function()
+      pcall(require('nvim-treesitter.install').update { with_sync = true })
+    end,
+  },
 
   -- UI --
 
-    -- Colorscheme
+  -- Colorscheme
+  {
     'loctvl842/monokai-pro.nvim',
+    tag = 'v1.21.0',
+  },
 
-    -- File explorer
-    { 'nvim-tree/nvim-tree.lua', dependencies = { 'kyazdani42/nvim-web-devicons' } },
-    { 'stevearc/oil.nvim', tag = 'v2.2.0', opts = {}, dependencies = { 'kyazdani42/nvim-web-devicons' } },
+  -- File explorer
+  {
+    'nvim-tree/nvim-tree.lua',
+    dependencies = {
+      'kyazdani42/nvim-web-devicons'
+    }
+  },
+  {
+    'stevearc/oil.nvim',
+    tag = 'v2.2.0',
+    opts = {},
+    dependencies = {
+      'kyazdani42/nvim-web-devicons'
+    }
+  },
 
-    -- Customized vim status line
-    { 'nvim-lualine/lualine.nvim', dependencies = { 'kyazdani42/nvim-web-devicons' } },
+  -- Customized vim status line
+  {
+    'nvim-lualine/lualine.nvim',
+    dependencies = {
+      'kyazdani42/nvim-web-devicons'
+    }
+  },
 
   -- Quickly swapping text with visual mode and motion command cx
   'tommcdo/vim-exchange',
@@ -113,20 +176,39 @@ require('lazy').setup({
   'tpope/vim-rhubarb',
 
   -- Add Golang support
-  { 'fatih/vim-go', build = ':GoUpdateBinaries' },
+  {
+    'fatih/vim-go',
+    build = ':GoUpdateBinaries'
+  },
 
   -- Add Rust support
   'simrat39/rust-tools.nvim',
 
   -- Add Markdown support
-  { 'plasticboy/vim-markdown', ft = {'markdown'} },
-  { 'toppair/peek.nvim', ft = {'markdown'}, build = 'deno task --quiet build:fast', config = function() require('plugins.peek') end },
+  {
+    'plasticboy/vim-markdown',
+    ft = {'markdown'}
+  },
+  {
+    'toppair/peek.nvim',
+    ft = {'markdown'},
+    build = 'deno task --quiet build:fast',
+    config = function()
+      require('plugins.peek')
+    end
+  },
 
   -- Add EditorConfig support
   'editorconfig/editorconfig-vim',
 
-  { 'cespare/vim-toml', ft = {'toml'} },
-  { 'StanAngeloff/php.vim', ft = {'php'} }
+  {
+    'cespare/vim-toml',
+    ft = {'toml'}
+  },
+  {
+    'StanAngeloff/php.vim',
+    ft = {'php'}
+  }
 })
 
 -- Plugin Configuration
