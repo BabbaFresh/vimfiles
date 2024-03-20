@@ -132,7 +132,7 @@ require('lazy').setup({
   -- Colorscheme
   {
     'loctvl842/monokai-pro.nvim',
-    tag = 'v1.21.0',
+    tag = 'v1.19.1',
   },
 
   -- File explorer
@@ -197,9 +197,6 @@ require('lazy').setup({
       require('plugins.peek')
     end
   },
-
-  -- Add EditorConfig support
-  'editorconfig/editorconfig-vim',
 
   {
     'cespare/vim-toml',
