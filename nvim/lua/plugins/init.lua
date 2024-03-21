@@ -202,14 +202,6 @@ require('lazy').setup({
     'plasticboy/vim-markdown',
     ft = {'markdown'}
   },
-  {
-    'toppair/peek.nvim',
-    ft = {'markdown'},
-    build = 'deno task --quiet build:fast',
-    config = function()
-      require('plugins.peek')
-    end
-  },
 
   {
     'cespare/vim-toml',
