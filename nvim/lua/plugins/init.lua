@@ -41,7 +41,7 @@ require('lazy').setup({
   -- Testing Integration
   {
     'mistweaverco/jest.nvim',
-    dir = "/Users/marco/code/marco/jest.nvim",
+    dir = "/home/marco/projects/personal/jest.nvim",
   },
 
   -- Keybindings
@@ -83,7 +83,7 @@ require('lazy').setup({
     config = function()
       require('umbizo').setup()
     end,
-    dir = "/Users/marco/code/marco/umbizo.nvim"
+    dir = "/home/marco/projects/personal/umbizo.nvim"
   },
 
   -- Harpoon, quick access to project files
