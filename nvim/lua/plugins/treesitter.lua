@@ -14,6 +14,7 @@ require('nvim-treesitter.configs').setup {
     'python',
     'rust',
     'scss',
+    'sql',
     'svelte',
     'tsx',
     'typescript',
