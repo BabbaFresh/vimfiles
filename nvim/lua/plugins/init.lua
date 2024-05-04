@@ -140,12 +140,29 @@ require('lazy').setup({
     end,
   },
 
+  -- Discord
+  {
+    'mistweaverco/discord.nvim',
+    config = function()
+      require('discord').setup({
+        -- log_level = 'debug',
+      })
+    end,
+    dir = "/home/marco/projects/personal/discord.nvim",
+  },
+
   -- UI --
 
   -- Colorscheme
   {
-    'loctvl842/monokai-pro.nvim',
-    tag = 'v1.19.1',
+    'mistweaverco/bluloco.nvim',
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require('bluloco').setup({
+        theme = 'dark',
+      })
+    end,
   },
 
   -- File explorer
@@ -222,4 +239,3 @@ require 'plugins.oil'
 require 'plugins.nvimtree'
 require 'plugins.treesitter'
 require 'plugins.whichkey'
-require 'plugins.monokaipro'

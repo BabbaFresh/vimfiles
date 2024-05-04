@@ -30,7 +30,7 @@ opt.clipboard = 'unnamedplus'
 g.vim_markdown_folding_disabled = 1                    -- Disable markdown folding
 
 -- Colorscheme
-cmd 'colorscheme monokai-pro'
+cmd 'colorscheme bluloco'
 
 -- Remap leader key
 g.mapleader = ','
