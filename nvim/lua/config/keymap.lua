@@ -28,5 +28,7 @@ map('n', '<leader>E', ':NvimTreeToggle<CR>')
 -- Telescope symbols
 --https://github.com/nvim-telescope/telescope-symbols.nvim
 vim.keymap.set("i", "<C-e>", function() require('telescope.builtin').symbols({ sources = { 'emoji', 'gitmoji' } }) end)
+-- Telescope lsp document symbols
+vim.keymap.set("n", "<leader>t", function() require('telescope.builtin').lsp_document_symbols() end)
 
 vim.keymap.set("n", "-", require("oil").open, { desc = "Open parent directory" })
