@@ -7,7 +7,8 @@ diagnostic-languageserver \
 yaml-language-server \
 bash-language-server \
 @tailwindcss/language-server \
-svelte-language-server
+svelte-language-server \
+sql-language-server
 
 # Install Lua Language Server
 # https://github.com/LuaLS/lua-language-server
