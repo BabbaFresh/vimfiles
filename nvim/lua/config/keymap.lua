@@ -14,6 +14,7 @@ map('n', '<C-h>', ':lua require("harpoon.mark").add_file()<CR>')
 
 -- Replacement for ctrlp
 map('n', '<C-p>', ':Telescope find_files<CR>')
+vim.keymap.set("n", "<C-p>", function() require('telescope.builtin').find_files({ find_command = { 'rg', '--files', '--hidden', '-g', '!.git' } }) end)
 
 map('n', '<leader>be', ':lua require("bafa.ui").toggle()<CR>')
 
