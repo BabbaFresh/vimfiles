@@ -17,11 +17,24 @@ require('lazy').setup({
 
   -- Code Analysis
   'neovim/nvim-lspconfig',
-  'hrsh7th/nvim-cmp', -- Autocompletion plugin
-  'hrsh7th/cmp-nvim-lsp', -- LSP source for nvim-cmp
-  'hrsh7th/cmp-buffer',
-  'hrsh7th/cmp-path',
-  'hrsh7th/cmp-cmdline',
+  {
+    'hrsh7th/nvim-cmp', -- Autocompletion plugin
+    dependencies = {
+      'hrsh7th/cmp-nvim-lsp', -- LSP source for nvim-cmp
+      'hrsh7th/cmp-buffer',
+      'hrsh7th/cmp-path',
+      'hrsh7th/cmp-cmdline',
+      {
+        'petertriho/cmp-git', -- Git source for nvim-cmp
+        dependencies = {
+          'nvim-lua/plenary.nvim',
+        },
+      },
+      'hrsh7th/vim-vsnip',
+      'onsails/lspkind.nvim', -- Add vscode-like pictograms to completion items
+    },
+  },
+
   "ray-x/lsp_signature.nvim", -- Show Function Signature while entering parameters
 
   -- Show LSP diagnostics
@@ -34,9 +47,6 @@ require('lazy').setup({
 
   -- This is 🔥 github copilot
   "github/copilot.vim",
-
-  -- Snippets
-  'hrsh7th/vim-vsnip',
 
   -- Testing Integration
   {
