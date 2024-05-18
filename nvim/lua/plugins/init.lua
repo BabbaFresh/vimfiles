@@ -45,6 +45,14 @@ require('lazy').setup({
     }
   },
 
+  -- Navigate code on steroids with flash.nvim ⚡
+  {
+    'folke/flash.nvim',
+    config = function()
+      require('flash').setup()
+    end
+  },
+
   -- This is 🔥 github copilot
   "github/copilot.vim",
 
