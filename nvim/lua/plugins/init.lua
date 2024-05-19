@@ -187,6 +187,22 @@ require('lazy').setup({
     end,
   },
 
+  -- Color highlighting
+  {
+    'brenoprata10/nvim-highlight-colors',
+    config = function()
+      require('nvim-highlight-colors').setup({
+        ---Render style
+        ---@usage 'background'|'foreground'|'virtual'
+        render = 'virtual',
+        ---Highlight named colors, e.g. 'green'
+        enable_named_colors = false,
+        ---Highlight tailwind colors, e.g. 'bg-blue-500'
+        enable_tailwind = false,
+      })
+    end
+  },
+
   -- File explorer
   {
     'nvim-tree/nvim-tree.lua',

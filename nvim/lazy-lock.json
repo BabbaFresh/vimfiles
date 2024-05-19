@@ -19,6 +19,7 @@
   "luarocks.nvim": { "branch": "main", "commit": "d3dda396d66e484590f253d1ac6d8980e3130807" },
   "neogit": { "branch": "master", "commit": "98e6e855266282a3dd32e642ea14209b8787882a" },
   "nvim-cmp": { "branch": "main", "commit": "8f3c541407e691af6163e2447f3af1bd6e17f9a3" },
+  "nvim-highlight-colors": { "branch": "main", "commit": "20ca7c1e799b939d5f9d57fbc8720cf7099942b9" },
   "nvim-lspconfig": { "branch": "master", "commit": "ee450e6a9364fc740236166dd57aaca1ec7cdb48" },
   "nvim-tree.lua": { "branch": "master", "commit": "64f61e4c913047a045ff90bd188dd3b54ee443cf" },
   "nvim-treesitter": { "branch": "master", "commit": "73fdd31377d76aa1eea63e66581a8c6b7a71da94" },
