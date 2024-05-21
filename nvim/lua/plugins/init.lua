@@ -230,9 +230,6 @@ require('lazy').setup({
   -- Quickly swapping text with visual mode and motion command cx
   'tommcdo/vim-exchange',
 
-  -- Comments
-  'tpope/vim-commentary',
-
   -- Repeat
   'tpope/vim-repeat',
 
