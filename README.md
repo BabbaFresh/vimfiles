@@ -1,7 +1,7 @@
 Neovim Configuration Files
 ==========================
 
-![](icon.png)
+![banner](icon.png)
 
 These are my Neovim configuration files.
 
