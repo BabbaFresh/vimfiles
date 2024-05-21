@@ -1,11 +1,40 @@
-Neovim Configuration Files
-==========================
+<h1 align="center">Neovimfiles</h1>
 
-![banner](icon.png)
+<div align="center">
+  <a href="#install">Install</a>
+  <span> • </span>
+  <a href="#features">Features</a>
+  <span> • </span>
+  <a href="#languages">Languages</a>
+  <p></p>
+</div>
+
+<div align="center">
+
+![Lua](https://img.shields.io/badge/Made%20with%20Lua-blueviolet.svg?style=for-the-badge&logo=lua)
+
+</div>
 
 These are my Neovim configuration files.
 
-## Features
+## install
+
+**Prerequisites**
+
+- Neovim 0.10+
+- Node.js 18+ (for most LSPs)
+
+```sh
+mkdir -p ~/projects/personal
+git clone https://github.com/gorillamoe/neovimfiles ~/projects/personal/neovimfiles
+ln -s ~/projects/personal/neovimfiles ~/.config/nvim
+cd ~/.config/nvim
+./install-language-servers.sh
+```
+
+2. Open Neovim. You should see a _"Installing lazy.nvim.."_ and popup installing the plugins on the first run
+
+## features
 
 - **Plugins**: [lazy.nvim][lazy.nvim] to manage my plugins.
 - **LSP**: [nvim-lspconfig][nvim-lspconfig] to configure the Language Server Protocol.
@@ -22,7 +51,7 @@ These are my Neovim configuration files.
   - [neogit][neogit] as git client.
   - [githubutils.nvim][githubutils.nvim] to interact with GitHub.
 
-## Language support
+## languages
 
 The following languages are supported (either via LSP and/or Treesitter):
 
