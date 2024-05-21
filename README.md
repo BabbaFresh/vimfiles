@@ -50,6 +50,9 @@ cd ~/.config/nvim
   - [gitsigns.nvim][gitsigns.nvim] as git signs.
   - [neogit][neogit] as git client.
   - [githubutils.nvim][githubutils.nvim] to interact with GitHub.
+- **Comments**:
+  - [todo-comments.nvim][todo-comments.nvim] as todo comments highlighter.
+  - [ts-comments.nvim][ts-comments.nvim] to enhance native comments.
 
 ## languages
 

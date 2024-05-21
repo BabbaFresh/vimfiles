@@ -203,6 +203,20 @@ require('lazy').setup({
     end
   },
 
+  -- Comments
+  {
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    opts = {},
+  },
+  {
+    "folke/ts-comments.nvim",
+    event = "VeryLazy",
+    opts = {},
+  },
+
+
+
   -- File explorer
   {
     'nvim-tree/nvim-tree.lua',
