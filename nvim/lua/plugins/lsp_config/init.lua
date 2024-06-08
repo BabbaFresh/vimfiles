@@ -12,6 +12,7 @@ local servers = {
   'eslint',
   'gopls',
   'html',
+  'intelephense',
   'jsonls',
   'rust_analyzer',
   'sqlls',
