@@ -2,7 +2,7 @@ local wk = require('which-key')
 
 wk.register({
   f = {
-    name = "Flafh.nvim ⚡",
+    name = "Flash.nvim ⚡",
     f = { "<Cmd>lua require('flash').jump()<CR>", "Jump ⚡" },
     t = { "<Cmd>require('flash').treesitter()<CR>", "Treesitter 🌳"},
     T = { "<Cmd>require('flash').toggle()<CR>", "Toggle"},
