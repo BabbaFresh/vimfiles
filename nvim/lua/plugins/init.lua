@@ -85,6 +85,12 @@ require('lazy').setup({
       require('gitsigns').setup()
     end
   },
+  {
+    'FabijanZulj/blame.nvim',
+    config = function()
+      require('blame').setup()
+    end
+  },
 
   -- Github Integration
   {

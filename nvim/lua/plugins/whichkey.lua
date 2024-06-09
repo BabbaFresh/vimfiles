@@ -21,6 +21,14 @@ wk.register({
 }, { prefix = "<leader>", mode = "v" })
 
 wk.register({
+  G = {
+    name = "Git 🐙",
+    n = { "<Cmd>Neogit<CR>", "Neogit 🥷" },
+    b = { "<Cmd>BlameToggle window<CR>", "Blame 😠" },
+  },
+}, { prefix = "<leader>", mode = "n" })
+
+wk.register({
   g = {
     name = "Goto",
       g = { "<Cmd>lua require('telescope.builtin').live_grep()<CR>", "Live Grep"},

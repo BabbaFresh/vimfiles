@@ -1,5 +1,6 @@
 {
   "bafa.nvim": { "branch": "main", "commit": "0e9e9df92ee7d95b1d03b806c9402207386622ef" },
+  "blame.nvim": { "branch": "main", "commit": "dedbcdce857f708c63f261287ac7491a893912d0" },
   "bluloco.nvim": { "branch": "main", "commit": "4300b7e6f6f071e08efea6758753342daffc2715" },
   "cmp-buffer": { "branch": "main", "commit": "3022dbc9166796b644a841a02de8dd1cc1d311fa" },
   "cmp-cmdline": { "branch": "main", "commit": "d250c63aa13ead745e3a40f61fdd3470efde3923" },
