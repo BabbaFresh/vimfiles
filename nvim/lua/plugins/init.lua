@@ -181,6 +181,14 @@ require('lazy').setup({
 
   -- UI --
 
+  -- Hide sensitive data
+  {
+    'laytan/cloak.nvim',
+    config = function()
+      require('cloak').setup()
+    end
+  },
+
   -- Colorscheme
   {
     'mistweaverco/bluloco.nvim',
