@@ -154,7 +154,7 @@ require('lazy').setup({
     end,
   },
 
-  -- Discord
+  -- Social Coding
   {
     'mistweaverco/discord.nvim',
     config = function()
@@ -163,6 +163,10 @@ require('lazy').setup({
       })
     end,
     dir = "/home/marco/projects/personal/discord.nvim",
+  },
+  {
+    'wakatime/vim-wakatime',
+    lazy = false,
   },
 
   -- UI --
