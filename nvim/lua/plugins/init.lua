@@ -122,20 +122,6 @@ require('lazy').setup({
     }
   },
 
-  -- Rest Console
-  -- See https://github.com/rest-nvim/rest.nvim?tab=readme-ov-file#packernvim for setup options
-  {
-    'rest-nvim/rest.nvim',
-    config = function()
-      require('rest-nvim').setup({})
-    end,
-    ft = {'http'},
-    dependencies = {
-      'nvim-lua/plenary.nvim',
-      'vhyrro/luarocks.nvim'
-    }
-  },
-
   -- Trailing whitespace highlighting & automatic fixing
   'ntpeters/vim-better-whitespace',
 
