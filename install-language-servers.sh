@@ -8,8 +8,11 @@ yaml-language-server \
 bash-language-server \
 @tailwindcss/language-server \
 svelte-language-server \
-intelephense \ # PHP Language Server - https://intelephense.com/faq.html - put license key in ~/intelephense/licence.txt
+intelephense \
 sql-language-server
+
+# PHP Language Server - https://intelephense.com/faq.html
+# - put license key in ~/intelephense/licence.txt
 
 # Install Lua Language Server
 # https://github.com/LuaLS/lua-language-server
