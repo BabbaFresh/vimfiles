@@ -105,15 +105,6 @@ require('lazy').setup({
     'mistweaverco/bafa.nvim'
   },
 
-  -- Umbizo, formatting on steroids 💊
-  {
-    'mistweaverco/umbizo.nvim',
-    config = function()
-      require('umbizo').setup()
-    end,
-    dir = "/home/marco/projects/personal/umbizo.nvim"
-  },
-
   -- Harpoon, quick access to project files
   {
     'ThePrimeagen/harpoon',
@@ -155,15 +146,6 @@ require('lazy').setup({
   },
 
   -- Social Coding
-  {
-    'mistweaverco/discord.nvim',
-    config = function()
-      require('discord').setup({
-        -- log_level = 'debug',
-      })
-    end,
-    dir = "/home/marco/projects/personal/discord.nvim",
-  },
   {
     'wakatime/vim-wakatime',
     lazy = false,

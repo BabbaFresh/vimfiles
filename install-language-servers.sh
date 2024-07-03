@@ -9,6 +9,7 @@ bash-language-server \
 @tailwindcss/language-server \
 svelte-language-server \
 intelephense \
+pyright \
 sql-language-server
 
 # PHP Language Server - https://intelephense.com/faq.html

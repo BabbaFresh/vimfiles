@@ -14,6 +14,7 @@ local servers = {
   'html',
   'intelephense',
   'jsonls',
+  'pyright',
   'rust_analyzer',
   'sqlls',
   'svelte',
