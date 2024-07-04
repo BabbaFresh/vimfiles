@@ -12,10 +12,10 @@ wk.register({
 wk.register({
   g = {
     name = "Goto",
-      h = {
-        name = "Github Utils",
-        o = { "<Cmd>lua require('githubutils').open({ v = true })<CR>", "Open" },
-        O = { "<Cmd>lua require('githubutils').open({ v = true, commit = true })<CR>", "Open commit" },
+      n = {
+        name = "ndoo",
+        o = { "<Cmd>lua require('ndoo').open({ v = true })<CR>", "Open" },
+        O = { "<Cmd>lua require('ndoo').open({ v = true, commit = true })<CR>", "Open commit" },
       },
   },
 }, { prefix = "<leader>", mode = "v" })
@@ -32,16 +32,16 @@ wk.register({
   g = {
     name = "Goto",
       g = { "<Cmd>lua require('telescope.builtin').live_grep()<CR>", "Live Grep"},
-      h = {
-        name = "Github Utils",
-        o = { "<Cmd>lua require('githubutils').open()<CR>", "Open" },
-        O = { "<Cmd>lua require('githubutils').open({ commit = true })<CR>", "Open commit" },
-        r = { "<Cmd>lua require('githubutils').repo()<CR>", "Repo" },
-        c = { "<Cmd>lua require('githubutils').commit()<CR>", "Commit" },
-        p = { "<Cmd>lua require('githubutils').pulls()<CR>", "Pulls" },
-        i = { "<Cmd>lua require('githubutils').issues()<CR>", "Issues" },
-        a = { "<Cmd>lua require('githubutils').actions()<CR>", "Actions" },
-        l = { "<Cmd>lua require('githubutils').labels()<CR>", "Labels" },
+      n = {
+        name = "ndoo",
+        o = { "<Cmd>lua require('ndoo').open()<CR>", "Open" },
+        O = { "<Cmd>lua require('ndoo').open({ commit = true })<CR>", "Open commit" },
+        r = { "<Cmd>lua require('ndoo').repo()<CR>", "Repo" },
+        c = { "<Cmd>lua require('ndoo').commit()<CR>", "Commit" },
+        p = { "<Cmd>lua require('ndoo').pulls()<CR>", "Pulls" },
+        i = { "<Cmd>lua require('ndoo').issues()<CR>", "Issues" },
+        a = { "<Cmd>lua require('ndoo').pipelines()<CR>", "Pipelines" },
+        l = { "<Cmd>lua require('ndoo').labels()<CR>", "Labels" },
       },
       s = {
         name = "Symbols",

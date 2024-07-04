@@ -49,7 +49,7 @@ cd ~/.config/nvim
 - **Git**:
   - [gitsigns.nvim][gitsigns.nvim] as git signs.
   - [neogit][neogit] as git client.
-  - [githubutils.nvim][githubutils.nvim] to interact with GitHub.
+  - [ndoo.nvim][ndoo.nvim] to interact with GitHub, GitLab, and Bitbucket.
 - **Comments**:
   - [todo-comments.nvim][todo-comments.nvim] as todo comments highlighter.
   - [ts-comments.nvim][ts-comments.nvim] to enhance native comments.
@@ -88,4 +88,4 @@ The following languages are supported (either via LSP and/or Treesitter):
 [oil.nvim]: https://github.com/stevearc/oil.nvim
 [gitsigns.nvim]: https://github.com/lewis6991/gitsigns.nvim
 [neogit]: https://github.com/NeogitOrg/neogit
-[githubutils.nvim]: https://github.com/mistweaverco/githubutils.nvim
+[ndoo.nvim]: https://github.com/mistweaverco/ndoo.nvim

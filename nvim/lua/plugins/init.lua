@@ -107,9 +107,9 @@ require('lazy').setup({
     end
   },
 
-  -- Github Integration
+  -- Github, GitLab and Bitbucket Integration
   {
-    'mistweaverco/githubutils.nvim',
+    'mistweaverco/ndoo.nvim',
     dependencies = {
       'nvim-telescope/telescope.nvim'
     }
