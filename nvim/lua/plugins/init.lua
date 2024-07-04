@@ -60,14 +60,29 @@ require('lazy').setup({
   -- This is 🔥 github copilot
   "github/copilot.vim",
 
-  -- Testing Integration
+  -- Simple HTTP Client
   {
-    'mistweaverco/jest.nvim',
-    dir = "/home/marco/projects/personal/jest.nvim",
+    'mistweaverco/kulala.nvim',
+    dir = "/home/marco/projects/personal/kulala.nvim",
   },
 
   -- Keybindings
   'folke/which-key.nvim',
+
+  -- Linters and formatters
+  {
+    'stevearc/conform.nvim',
+    config = function()
+      require("conform").setup({
+        formatters_by_ft = {
+          lua = { "stylua" },
+          python = { "black" },
+          javascript = { { "prettierd", "prettier" } },
+        },
+        format_on_save = true,
+      })
+    end
+  },
 
   -- Git Integration
   {
