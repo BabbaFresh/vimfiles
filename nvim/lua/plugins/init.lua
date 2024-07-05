@@ -112,7 +112,8 @@ require('lazy').setup({
     'mistweaverco/ndoo.nvim',
     dependencies = {
       'nvim-telescope/telescope.nvim'
-    }
+    },
+    dir = "/home/marco/projects/personal/ndoo.nvim",
   },
 
   -- Bafa, Buffer management on steroids 💊

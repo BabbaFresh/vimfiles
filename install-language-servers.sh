@@ -1,16 +1,18 @@
 #!/usr/bin/env bash
 
-npm install -g vscode-langservers-extracted \
+npm install -g \
 @prisma/language-server \
-typescript-language-server \
-diagnostic-languageserver \
-yaml-language-server \
-bash-language-server \
 @tailwindcss/language-server \
-svelte-language-server \
+bash-language-server \
+diagnostic-languageserver \
+dockerfile-language-server-nodejs \
 intelephense \
 pyright \
-sql-language-server
+sql-language-server \
+svelte-language-server \
+typescript-language-server \
+vscode-langservers-extracted \
+yaml-language-server
 
 # PHP Language Server - https://intelephense.com/faq.html
 # - put license key in ~/intelephense/licence.txt
