@@ -101,7 +101,9 @@ require('lazy').setup({
         formatters_by_ft = {
           lua = { "stylua" },
           python = { "black" },
-          javascript = { { "prettierd", "prettier" } },
+          javascript = { "eslint", { "prettierd",  "prettier" } },
+          typescript = { "eslint", { "prettierd",  "prettier" } },
+          typescriptreact = { "eslint", { "prettierd",  "prettier" } },
         },
         format_on_save = true,
       })
