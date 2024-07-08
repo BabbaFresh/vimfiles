@@ -56,7 +56,7 @@ require('lualine').setup({
   sections = {
     lualine_a = { "mode" },
     lualine_b = {},
-    lualine_c = { "filename" },
+    lualine_c = { "filename", "kulala" },
     lualine_x = { "encoding", "fileformat", "branch", diff, diagnostics, filetype },
     lualine_y = { "progress" },
     lualine_z = { "location" }

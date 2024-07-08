@@ -60,9 +60,9 @@ wk.register({
 wk.register({
   d = {
     name = "Debug",
-    e = { "<Cmd>lua vim.diagnostic.open_float(0, {scope='line'})<CR>", "Show error in float" },
-    w = { "<Cmd>TroubleToggle workspace_diagnostics<CR>", "Workspace Diagnostics" },
-    d = { "<Cmd>TroubleToggle document_diagnostics<CR>", "Document Diagnostics" },
+    e = { "<cmd>lua vim.diagnostic.open_float(0, {scope='line'})<CR>", "Show error in float" },
+    w = { "<cmd>lua require('trouble').toggle({ mode = 'diagnostics' })<cr>", "Workspace Diagnostics" },
+    d = { "<cmd>lua require('trouble').toggle({ mode = 'diagnostics', filter = { buf = 0 } })<cr>", "Document Diagnostics" },
   },
 }, { prefix = "<leader>" })
 
