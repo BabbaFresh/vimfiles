@@ -1,0 +1,3 @@
+return {
+  "mistweaverco/bafa.nvim"
+}
