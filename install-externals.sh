@@ -23,10 +23,11 @@ yaml-language-server
 # https://github.com/LuaLS/lua-language-server
 
 # Install Vale Markdown Linter
-wget https://github.com/errata-ai/vale/releases/download/v3.6.1/vale_3.6.1_Linux_64-bit.tar.gz -O vale.tar.gz && \
-  tar -xvf vale.tar.gz && \
-  sudo mv vale /usr/local/bin && \
-  rm vale.tar.gz
+tmpdir=$(mktemp -d)
+wget https://github.com/errata-ai/vale/releases/download/v3.6.1/vale_3.6.1_Linux_64-bit.tar.gz -O "$tmpdir/vale.tar.gz" && \
+  tar -xvf "$tmpdir/vale.tar.gz" -C "$tmpdir" && \
+  sudo mv "$tmpdir/vale" /usr/local/bin/vale && \
+  rm -rf "$tmpdir"
 
 # Install Lua Linters
 sudo luarocks install \
