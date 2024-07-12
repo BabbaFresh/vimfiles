@@ -32,8 +32,9 @@ require("lazy").setup({
   require("plugins.config.kulala-nvim"),
   -- Keybindings
   require("plugins.config.which-key-nvim"),
-  -- Linters and formatters 💄
+  -- Formatters 💄 and Linters 🧹
   require("plugins.config.conform-nvim"),
+  require("plugins.config.nvim-lint"),
   -- Git Integration
   require("plugins.config.neogit"),
   require("plugins.config.gitsigns-nvim"),
