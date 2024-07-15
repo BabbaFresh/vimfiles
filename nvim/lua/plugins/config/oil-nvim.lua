@@ -1,9 +1,9 @@
 return {
-  'stevearc/oil.nvim',
-  tag = 'v2.2.0',
+  "stevearc/oil.nvim",
+  -- tag = 'v2.2.0',
   opts = {},
   dependencies = {
-    'kyazdani42/nvim-web-devicons'
+    "kyazdani42/nvim-web-devicons",
   },
   config = function()
     require("oil").setup({

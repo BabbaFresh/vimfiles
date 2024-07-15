@@ -1,96 +1,82 @@
 return {
   "folke/which-key.nvim",
   config = function()
-    local wk = require('which-key')
-    wk.register({
-      f = {
-        name = "Flash.nvim ⚡",
-        f = { "<Cmd>lua require('flash').jump()<CR>", "Jump ⚡" },
-        t = { "<Cmd>require('flash').treesitter()<CR>", "Treesitter 🌳"},
-        T = { "<Cmd>require('flash').toggle()<CR>", "Toggle"},
+    local wk = require("which-key")
+    wk.add({
+      mode = { "n" },
+      { "<leader>f", group = "Flash.nvim ⚡" },
+      { "<leader>fT", "<Cmd>require('flash').toggle()<CR>", desc = "Toggle" },
+      { "<leader>ff", "<Cmd>lua require('flash').jump()<CR>", desc = "Jump ⚡" },
+      { "<leader>ft", "<Cmd>require('flash').treesitter()<CR>", desc = "Treesitter 🌳" },
+    })
+
+    wk.add({
+      {
+        mode = { "v" },
+        { "<leader>g", group = "Goto" },
+        { "<leader>gn", group = "ndoo" },
+        { "<leader>gnO", "<Cmd>lua require('ndoo').open({ v = true, commit = true })<CR>", desc = "Open commit" },
+        { "<leader>gno", "<Cmd>lua require('ndoo').open({ v = true })<CR>", desc = "Open" },
       },
-    }, { prefix = "<leader>", mode = "n" })
+    })
 
-    wk.register({
-      g = {
-        name = "Goto",
-          n = {
-            name = "ndoo",
-            o = { "<Cmd>lua require('ndoo').open({ v = true })<CR>", "Open" },
-            O = { "<Cmd>lua require('ndoo').open({ v = true, commit = true })<CR>", "Open commit" },
-          },
+    wk.add({
+      mode = { "n" },
+      { "<leader>G", group = "Git 🐙" },
+      { "<leader>Gb", "<Cmd>BlameToggle window<CR>", desc = "Blame 😠" },
+      { "<leader>Gn", "<Cmd>Neogit<CR>", desc = "Neogit 🥷" },
+    })
+
+    wk.add({
+      mode = { "n" },
+      { "<leader>g", group = "Goto" },
+      { "<leader>gD", "<Cmd>lua vim.lsp.buf.declaration()<CR>", desc = "Declaration" },
+      { "<leader>gd", "<Cmd>lua require('telescope.builtin').lsp_definitions()<CR>", desc = "Definitions" },
+      { "<leader>gg", "<Cmd>lua require('telescope.builtin').live_grep()<CR>", desc = "Live Grep" },
+      { "<leader>gi", "<Cmd>lua require('telescope.builtin').lsp_implementations()<CR>", desc = "Implementations" },
+      { "<leader>gk", "<Cmd>lua vim.lsp.buf.hover()<CR>", desc = "Show Function Docs" },
+      { "<leader>gn", group = "ndoo" },
+      { "<leader>gnO", "<Cmd>lua require('ndoo').open({ commit = true })<CR>", desc = "Open commit" },
+      { "<leader>gna", "<Cmd>lua require('ndoo').pipelines()<CR>", desc = "Pipelines" },
+      { "<leader>gnc", "<Cmd>lua require('ndoo').commit()<CR>", desc = "Commit" },
+      { "<leader>gni", "<Cmd>lua require('ndoo').issues()<CR>", desc = "Issues" },
+      { "<leader>gnl", "<Cmd>lua require('ndoo').labels()<CR>", desc = "Labels" },
+      { "<leader>gno", "<Cmd>lua require('ndoo').open()<CR>", desc = "Open" },
+      { "<leader>gnp", "<Cmd>lua require('ndoo').pulls()<CR>", desc = "Pulls" },
+      { "<leader>gnr", "<Cmd>lua require('ndoo').repo()<CR>", desc = "Repo" },
+      { "<leader>gr", "<Cmd>lua require('telescope.builtin').lsp_references()<CR>", desc = "References" },
+      { "<leader>gs", group = "Symbols" },
+      { "<leader>gsd", "<Cmd>lua require('telescope.builtin').lsp_document_symbols()<CR>", desc = "Document Symbols" },
+      {
+        "<leader>gsw",
+        "<Cmd>lua require('telescope.builtin').lsp_workspace_symbols()<CR>",
+        desc = "Workspace Symbols",
       },
-    }, { prefix = "<leader>", mode = "v" })
+      { "<leader>gt", "<Cmd>lua require('telescope.builtin').lsp_type_definitions()<CR>", desc = "Type Definitions" },
+    })
 
-    wk.register({
-      G = {
-        name = "Git 🐙",
-        n = { "<Cmd>Neogit<CR>", "Neogit 🥷" },
-        b = { "<Cmd>BlameToggle window<CR>", "Blame 😠" },
+    wk.add({
+      mode = { "n" },
+      { "<leader>d", group = "Debug" },
+      {
+        "<leader>dd",
+        "<cmd>lua require('trouble').toggle({ mode = 'diagnostics', filter = { buf = 0 } })<cr>",
+        desc = "Document Diagnostics",
       },
-    }, { prefix = "<leader>", mode = "n" })
-
-    wk.register({
-      g = {
-        name = "Goto",
-          g = { "<Cmd>lua require('telescope.builtin').live_grep()<CR>", "Live Grep"},
-          n = {
-            name = "ndoo",
-            o = { "<Cmd>lua require('ndoo').open()<CR>", "Open" },
-            O = { "<Cmd>lua require('ndoo').open({ commit = true })<CR>", "Open commit" },
-            r = { "<Cmd>lua require('ndoo').repo()<CR>", "Repo" },
-            c = { "<Cmd>lua require('ndoo').commit()<CR>", "Commit" },
-            p = { "<Cmd>lua require('ndoo').pulls()<CR>", "Pulls" },
-            i = { "<Cmd>lua require('ndoo').issues()<CR>", "Issues" },
-            a = { "<Cmd>lua require('ndoo').pipelines()<CR>", "Pipelines" },
-            l = { "<Cmd>lua require('ndoo').labels()<CR>", "Labels" },
-          },
-          s = {
-            name = "Symbols",
-            d = { "<Cmd>lua require('telescope.builtin').lsp_document_symbols()<CR>", "Document Symbols" },
-            w = { "<Cmd>lua require('telescope.builtin').lsp_workspace_symbols()<CR>", "Workspace Symbols" }
-          },
-          D = { "<Cmd>lua vim.lsp.buf.declaration()<CR>", "Declaration" },
-          d = { "<Cmd>lua require('telescope.builtin').lsp_definitions()<CR>", "Definitions"},
-          i = { "<Cmd>lua require('telescope.builtin').lsp_implementations()<CR>", "Implementations" },
-          r = { "<Cmd>lua require('telescope.builtin').lsp_references()<CR>", "References" },
-          t = { "<Cmd>lua require('telescope.builtin').lsp_type_definitions()<CR>", "Type Definitions" },
-          k = { "<Cmd>lua vim.lsp.buf.hover()<CR>", "Show Function Docs" }
+      { "<leader>de", "<cmd>lua vim.diagnostic.open_float(0, {scope='line'})<CR>", desc = "Show error in float" },
+      {
+        "<leader>dw",
+        "<cmd>lua require('trouble').toggle({ mode = 'diagnostics' })<cr>",
+        desc = "Workspace Diagnostics",
       },
-    }, { prefix = "<leader>" })
+    })
 
-    wk.register({
-      d = {
-        name = "Debug",
-        e = { "<cmd>lua vim.diagnostic.open_float(0, {scope='line'})<CR>", "Show error in float" },
-        w = { "<cmd>lua require('trouble').toggle({ mode = 'diagnostics' })<cr>", "Workspace Diagnostics" },
-        d = { "<cmd>lua require('trouble').toggle({ mode = 'diagnostics', filter = { buf = 0 } })<cr>", "Document Diagnostics" },
-      },
-    }, { prefix = "<leader>" })
-
-
-    wk.register({
-      r = {
-        name = "Refactor",
-        n = { "<Cmd>lua vim.lsp.buf.rename()<CR>", "Rename" },
-        a = { "<Cmd>lua vim.lsp.buf.code_action()<CR>", "Actions"},
-      },
-      f = {
-        name = "Format",
-        u = { "<cmd>lua require('umbizo').format()<CR>", "Umbizo" },
-        j = { "<cmd>lua require('umbizo.fmt.jq').format()<CR>", "JQ/JSON" },
-        p = { "<cmd>lua require('umbizo.fmt.prettier').format()<CR>", "Prettier" },
-        s = { "<cmd>lua vim.lsp.buf.formatting()<CR>", "LSP Formatting" },
-      }
-    }, { prefix = "<leader>" })
-
-    wk.register({
-      x = {
-        name = "Run",
-        x = { "<Cmd>JestIntegrated<CR>", "Jest integrated test" },
-        r = { "<Plug>RestNvim<CR>", "run the request under the cursor" },
-        p = { "<Plug>RestNvimPreview<CR>", "preview the request cURL command" },
-      }
-    }, { prefix = "<leader>" })
+    wk.add({
+      mode = { "n" },
+      { "<leader>r", group = "Refactor" },
+      { "<leader>rf", "<cmd>lua vim.lsp.buf.formatting()<CR>", desc = "LSP Formatting" },
+      { "<leader>ra", "<Cmd>lua vim.lsp.buf.code_action()<CR>", desc = "Actions" },
+      { "<leader>rn", "<Cmd>lua vim.lsp.buf.rename()<CR>", desc = "Rename" },
+    })
   end,
 }
