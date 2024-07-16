@@ -74,6 +74,8 @@ require("lazy").setup({
   require("plugins.config.vim-surround"),
   -- Add Golang support
   require("plugins.config.vim-go"),
+  -- Database 🗃️ support
+  require("plugins.config.vim-dadbod"),
 })
 
 -- Plugin Configuration

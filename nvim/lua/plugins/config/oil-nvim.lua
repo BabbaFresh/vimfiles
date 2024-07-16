@@ -1,6 +1,5 @@
 return {
   "stevearc/oil.nvim",
-  -- tag = 'v2.2.0',
   opts = {},
   dependencies = {
     "kyazdani42/nvim-web-devicons",
