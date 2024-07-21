@@ -13,6 +13,7 @@
   "diffview.nvim": { "branch": "main", "commit": "4516612fe98ff56ae0415a259ff6361a89419b0a" },
   "flash.nvim": { "branch": "main", "commit": "25ba3f4d1e0b080213b39518ebcfbb693a23c957" },
   "gitsigns.nvim": { "branch": "main", "commit": "d9f997dba757be01434ed3538d202f88286df476" },
+  "grug-far.nvim": { "branch": "main", "commit": "8d322481ee2e8ebc192513bdd370615e8884e7b7" },
   "lazy.nvim": { "branch": "main", "commit": "9d445ebbd89401544a538c6af080e4d2785abb49" },
   "lsp_signature.nvim": { "branch": "master", "commit": "a38da0a61c172bb59e34befc12efe48359884793" },
   "lspkind.nvim": { "branch": "master", "commit": "1735dd5a5054c1fb7feaf8e8658dbab925f4f0cf" },

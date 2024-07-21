@@ -76,6 +76,8 @@ require("lazy").setup({
   require("plugins.config.vim-go"),
   -- Database 🗃️ support
   require("plugins.config.vim-dadbod"),
+  -- Search on steroids with ripgrep
+  require("plugins.config.grug-far-nvim"),
 })
 
 -- Plugin Configuration
