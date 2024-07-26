@@ -20,6 +20,8 @@ require("lazy").setup({
   require("plugins.config.nvim-cmp"),
   -- Show Function Signature while entering parameters
   require("plugins.config.lsp_signature-nvim"),
+  -- Code Actions (based on lsp)
+  require("plugins.config.tiny-code-action-nvim"),
   -- Show LSP diagnostics
   require("plugins.config.trouble-nvim"),
   -- Nicer messages and commandline

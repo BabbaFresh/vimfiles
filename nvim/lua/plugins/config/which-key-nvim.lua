@@ -73,10 +73,8 @@ return {
 
     wk.add({
       mode = { "n" },
-      { "<leader>r", group = "Refactor" },
-      { "<leader>rf", "<cmd>lua vim.lsp.buf.formatting()<CR>", desc = "LSP Formatting" },
-      { "<leader>ra", "<Cmd>lua vim.lsp.buf.code_action()<CR>", desc = "Actions" },
-      { "<leader>rn", "<Cmd>lua vim.lsp.buf.rename()<CR>", desc = "Rename" },
+      { "<leader>c", group = "Code" },
+      { "<leader>ca", "<cmd>lua require('tiny-code-action').code_action()<CR>", desc = "Code Actions" },
     })
   end,
 }

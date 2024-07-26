@@ -33,6 +33,7 @@
   "plenary.nvim": { "branch": "master", "commit": "a3e3bc82a3f95c5ed0d7201546d5d2c19b20d683" },
   "telescope-symbols.nvim": { "branch": "master", "commit": "a6d0127a53d39b9fc2af75bd169d288166118aec" },
   "telescope.nvim": { "branch": "master", "commit": "79552ef8488cb492e0f9d2bf3b4e808f57515e35" },
+  "tiny-code-action.nvim": { "branch": "main", "commit": "157b9ac095a28b5eadb6d4891732323de21b763b" },
   "todo-comments.nvim": { "branch": "main", "commit": "96fee098a90e7c09c9811aa7df71d773ba8b9b53" },
   "trouble.nvim": { "branch": "main", "commit": "079de7b82b6de37ddf2df427e460b02b54f25b95" },
   "ts-comments.nvim": { "branch": "main", "commit": "80eec3b9663ac3c4743b584f361099b061d0a9e5" },
