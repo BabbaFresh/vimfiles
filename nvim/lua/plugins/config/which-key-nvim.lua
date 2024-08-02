@@ -74,7 +74,7 @@ return {
     wk.add({
       mode = { "n" },
       { "<leader>c", group = "Code" },
-      { "<leader>ca", "<cmd>lua require('tiny-code-action').code_action()<CR>", desc = "Code Actions" },
+      { "<leader>ca", "<cmd>lua require('tiny-code-action').code_action()<CR>", desc = "Actions" },
     })
   end,
 }

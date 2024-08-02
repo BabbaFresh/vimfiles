@@ -30,6 +30,8 @@ require("lazy").setup({
   require("plugins.config.flash-nvim"),
   -- This is 🔥 github copilot
   require("plugins.config.copilot-vim"),
+  -- blazingly fast ⚡ search 🔍
+  require("plugins.config.tafuta-nvim"),
   -- Simple HTTP Client 🐼
   require("plugins.config.kulala-nvim"),
   -- Keybindings

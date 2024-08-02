@@ -38,7 +38,10 @@ cargo install stylua
 pip install \
   black \
   isort \
-  pylint
+  pylint \
+  python-lsp-server \
+  pylsp-mypy \ # type checking
+  jedi-language-server
 
 # Install Shellcheck
 sudo apt install shellcheck
