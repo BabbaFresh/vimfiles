@@ -39,9 +39,8 @@ pip install \
   black \
   isort \
   pylint \
-  python-lsp-server \
-  pylsp-mypy \ # type checking
-  jedi-language-server
+  pyright \
+  pylsp-mypy # type checking
 
 # Install Shellcheck
 sudo apt install shellcheck
