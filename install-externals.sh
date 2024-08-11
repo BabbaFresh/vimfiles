@@ -13,6 +13,7 @@ pyright \
 sql-language-server \
 svelte-language-server \
 typescript-language-server \
+vim-language-server \
 vscode-langservers-extracted \
 yaml-language-server
 

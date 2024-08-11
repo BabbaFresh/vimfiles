@@ -17,7 +17,7 @@ return {
       "html",
       "intelephense",
       "jsonls",
-      "luals",
+      "lua_ls",
       "pyright",
       "rust_analyzer",
       "sqlls",
