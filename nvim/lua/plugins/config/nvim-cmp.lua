@@ -40,6 +40,13 @@ return {
         { name = "buffer" },
       }),
     })
+    cmp.setup.filetype("http", {
+      sources = cmp.config.sources({
+        { name = "kulala-cmp-graphql" },
+      }, {
+        { name = "buffer" },
+      }),
+    })
     require("cmp_git").setup()
     -- Set configuration for specific filetype.
     cmp.setup.filetype("gitcommit", {
@@ -87,5 +94,13 @@ return {
     },
     "hrsh7th/vim-vsnip",
     "onsails/lspkind.nvim", -- Add vscode-like pictograms to completion items
+    {
+      "mistweaverco/kulala-cmp-graphql", -- GraphQL source for nvim-cmp in http files
+      config = function()
+        require("kulala-cmp-graphql").setup()
+      end,
+      dir = "/home/marco/projects/personal/kulala-cmp-graphql.nvim",
+      ft = "http",
+    },
   },
 }
