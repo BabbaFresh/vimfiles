@@ -1,7 +1,5 @@
 return {
   "mistweaverco/kulala.nvim",
-  config = function()
-    require("kulala").setup()
-  end,
+  opts = {},
   dir = "/home/marco/projects/personal/kulala.nvim",
 }
