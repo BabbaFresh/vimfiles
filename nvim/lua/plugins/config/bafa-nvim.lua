@@ -1,3 +1,4 @@
 return {
-  "mistweaverco/bafa.nvim"
+  "mistweaverco/bafa.nvim",
+  dir = "~/projects/personal/bafa.nvim",
 }
