@@ -14,6 +14,8 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Install Plugins
 require("lazy").setup({
+  -- Neovim development for the lazy
+  require("plugins.config.lazydev-nvim"),
   -- Code Analysis
   require("plugins.config.nvim-lspconfig"),
   -- Autocompletion
