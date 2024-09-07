@@ -24,16 +24,20 @@ return {
       "svelte",
       "tailwindcss",
       "terraformls",
-      "tsserver",
+      "ts_ls",
       "vimls",
       "yamlls",
     }
 
     for _, lsp in ipairs(servers) do
       if nvim_lsp[lsp] ~= nil then
-        nvim_lsp[lsp].setup({
-          capabilities = capabilities,
-        })
+        if nvim_lsp[lsp].setup ~= nil then
+          nvim_lsp[lsp].setup({
+            capabilities = capabilities,
+          })
+        else
+          vim.notify("LSP server " .. lsp .. " does not have a setup function", vim.log.levels.ERROR)
+        end
       end
     end
 
