@@ -36,6 +36,8 @@ require("lazy").setup({
   require("plugins.config.tafuta-nvim"),
   -- Simple HTTP Client 🐼
   require("plugins.config.kulala-nvim"),
+  -- Minimal session management
+  require("plugins.config.kikao-nvim"),
   -- Keybindings
   require("plugins.config.which-key-nvim"),
   -- Formatters 💄 and Linters 🧹
@@ -85,9 +87,3 @@ require("lazy").setup({
   -- Search on steroids with ripgrep
   require("plugins.config.grug-far-nvim"),
 })
-
--- Plugin Configuration
--- require 'plugins.oil'
--- require 'plugins.nvimtree'
--- require 'plugins.treesitter'
--- require 'plugins.whichkey'
