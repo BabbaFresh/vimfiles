@@ -81,7 +81,7 @@ require("lazy").setup({
   -- Easily surround stuff
   require("plugins.config.vim-surround"),
   -- Add Golang support
-  require("plugins.config.vim-go"),
+  require("plugins.config.go-nvim"),
   -- Database 🗃️ support
   require("plugins.config.vim-dadbod"),
   -- Search on steroids with ripgrep

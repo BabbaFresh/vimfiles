@@ -43,7 +43,6 @@ return {
 
     local eslint_linter = require("config.linters.eslint")
     local shellcheck_linter = require("config.linters.shellcheck")
-    local nvim_lsp = require("lspconfig")
 
     nvim_lsp.diagnosticls.setup({
       filetypes = {
