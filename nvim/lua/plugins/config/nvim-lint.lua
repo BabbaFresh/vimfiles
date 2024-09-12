@@ -35,5 +35,5 @@ return {
         require("lint").try_lint()
       end,
     })
-  end
+  end,
 }

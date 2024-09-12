@@ -1,15 +1,17 @@
 return {
-  'stevearc/conform.nvim',
+  "stevearc/conform.nvim",
   config = function()
     require("conform").setup({
       formatters_by_ft = {
         lua = { "stylua" },
         python = { "isort", "black" },
-        javascript = { "eslint", { "prettierd",  "prettier" } },
-        typescript = { "eslint", { "prettierd",  "prettier" } },
-        typescriptreact = { "eslint", { "prettierd",  "prettier" } },
+        javascript = { "eslint", "prettier" },
+        typescript = { "eslint", "prettier" },
+        typescriptreact = { "eslint", "prettier" },
       },
-      format_on_save = true,
+      format_on_save = {
+        all = true,
+      },
     })
-  end
+  end,
 }
