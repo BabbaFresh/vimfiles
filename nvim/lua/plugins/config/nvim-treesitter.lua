@@ -10,6 +10,7 @@ return {
         "bash",
         "css",
         "go",
+        "graphql",
         "hcl",
         "http",
         "javascript",
