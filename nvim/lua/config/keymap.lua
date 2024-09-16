@@ -14,7 +14,7 @@ vim.keymap.set("n", "<C-p>", function()
   require("telescope.builtin").find_files({ find_command = { "rg", "--files", "--hidden", "-g", "!.git" } })
 end)
 
-map("n", "<leader>be", ':lua require("bafa.ui").toggle()<CR>')
+map("n", "<leader>be", ':lua require("bafa.ui").toggle()<CR>', { desc = "Toggle bafa", noremap = true, silent = true })
 
 -- Quickly swap between two files
 map("n", "<space>", ":b#<CR>")

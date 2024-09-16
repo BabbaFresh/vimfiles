@@ -53,3 +53,11 @@ vim.api.nvim_buf_set_keymap(
   "<cmd>lua require('kulala').from_curl()<cr>",
   { noremap = true, silent = true, desc = "Pastes curl from clipboard as http request" }
 )
+
+vim.api.nvim_buf_set_keymap(
+  0,
+  "n",
+  "<leader>se",
+  "<cmd>lua require('kulala').set_selected_env()<cr>",
+  { noremap = true, silent = true, desc = "Select environment" }
+)
