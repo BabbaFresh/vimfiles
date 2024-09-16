@@ -4,7 +4,7 @@ return {
     require("conform").setup({
       formatters_by_ft = {
         lua = { "stylua" },
-        python = { "isort", "black" },
+        python = { "autoflake", "black", "isort" },
         javascript = { "eslint", "prettier" },
         typescript = { "eslint", "prettier" },
         typescriptreact = { "eslint", "prettier" },
