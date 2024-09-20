@@ -65,7 +65,7 @@ require("lazy").setup({
   -- Hide 🙈 sensitive data
   require("plugins.config.cloak-nvim"),
   -- Colorscheme
-  require("plugins.config.bluloco-nvim"),
+  require("plugins.config.retro-theme-nvim"),
   -- Color highlighting
   require("plugins.config.nvim-highlight-colors"),
   -- Comments
