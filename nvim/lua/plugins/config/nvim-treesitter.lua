@@ -9,6 +9,7 @@ return {
       ensure_installed = {
         "bash",
         "css",
+        "gitcommit",
         "go",
         "graphql",
         "hcl",
