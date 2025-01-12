@@ -8,6 +8,7 @@ return {
         javascript = { "eslint", "prettier" },
         typescript = { "eslint", "prettier" },
         typescriptreact = { "eslint", "prettier" },
+        go = { "goimports", "gofmt" },
       },
       format_on_save = {
         all = true,
