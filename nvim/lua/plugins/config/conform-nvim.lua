@@ -9,6 +9,7 @@ return {
         typescript = { "eslint", "prettier" },
         typescriptreact = { "eslint", "prettier" },
         go = { "goimports", "gofmt" },
+        terraform = { "terraform_fmt" },
       },
       format_on_save = {
         all = true,
