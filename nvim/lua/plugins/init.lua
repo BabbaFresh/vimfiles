@@ -14,6 +14,9 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Install Plugins
 require("lazy").setup({
+  -- A tiny Neovim plugin that adds subtle animations to
+  -- various operations.
+  require("plugins.config.tiny-glimmer-nvim"),
   -- Neovim development for the lazy
   -- Causing issues for me at the moment
   -- require("plugins.config.lazydev-nvim"),
