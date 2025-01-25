@@ -5,9 +5,14 @@ return {
 
     vim.api.nvim_command("inoremap <C-n> <C-x><C-o>")
 
-    -- Set up lspconfig.
-    local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
+    -- Set up Blink.cmp-compatible capabilities
+    local blink = require("blink.cmp")
+    local capabilities = vim.lsp.protocol.make_client_capabilities()
 
+    -- Use Blink.cmp's capabilities enhancement (replace cmp_nvim_lsp)
+    -- capabilities = blink.update_capabilities(capabilities)
+
+    -- List of LSP servers to configure
     local servers = {
       "bashls",
       "cssls",
@@ -29,6 +34,7 @@ return {
       "yamlls",
     }
 
+    -- Configure each LSP server
     for _, lsp in ipairs(servers) do
       if nvim_lsp[lsp] ~= nil then
         if nvim_lsp[lsp].setup ~= nil then
@@ -41,9 +47,11 @@ return {
       end
     end
 
+    -- Custom linter configuration
     local eslint_linter = require("config.linters.eslint")
     local shellcheck_linter = require("config.linters.shellcheck")
 
+    -- Set up diagnosticls for custom linters
     nvim_lsp.diagnosticls.setup({
       filetypes = {
         "javascript",

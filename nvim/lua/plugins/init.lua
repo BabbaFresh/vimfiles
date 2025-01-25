@@ -20,10 +20,10 @@ require("lazy").setup({
   -- Neovim development for the lazy
   -- Causing issues for me at the moment
   -- require("plugins.config.lazydev-nvim"),
+  -- Autocompletion
+  require("plugins.config.blink-cmp"),
   -- Code Analysis
   require("plugins.config.nvim-lspconfig"),
-  -- Autocompletion
-  require("plugins.config.nvim-cmp"),
   -- Show Function Signature while entering parameters
   require("plugins.config.lsp_signature-nvim"),
   -- Code Actions (based on lsp)
