@@ -1,9 +1,9 @@
 vim.filetype.add({
   extension = {
-    ['http'] = 'http',
+    ["http"] = "http",
   },
   filename = {
-    ['tsconfig.json'] = 'jsonc',
-    ['.env'] = 'bash',
+    ["tsconfig.json"] = "jsonc",
+    [".env"] = "bash",
   },
 })

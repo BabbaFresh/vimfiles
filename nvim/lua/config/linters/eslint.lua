@@ -1,7 +1,15 @@
 return {
   sourceName = "eslint",
   command = "./node_modules/.bin/eslint",
-  rootPatterns = { ".eslintrc", ".eslintrc.json", ".eslintrc.cjs", ".eslintrc.js", ".eslintrc.yml", ".eslintrc.yaml", "package.json" },
+  rootPatterns = {
+    ".eslintrc",
+    ".eslintrc.json",
+    ".eslintrc.cjs",
+    ".eslintrc.js",
+    ".eslintrc.yml",
+    ".eslintrc.yaml",
+    "package.json",
+  },
   debounce = 100,
   args = {
     "--stdin",
@@ -21,6 +29,6 @@ return {
   },
   securities = {
     [2] = "error",
-    [1] = "warning"
+    [1] = "warning",
   },
 }

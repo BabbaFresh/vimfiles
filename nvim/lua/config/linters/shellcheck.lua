@@ -12,12 +12,12 @@ return {
       line = 1,
       column = 2,
       message = 4,
-      security = 3
-    };
+      security = 3,
+    },
   },
   securities = {
     error = "error",
     warning = "warning",
-    note = "info"
-  };
+    note = "info",
+  },
 }

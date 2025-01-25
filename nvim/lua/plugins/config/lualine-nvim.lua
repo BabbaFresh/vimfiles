@@ -1,10 +1,10 @@
 return {
   "nvim-lualine/lualine.nvim",
   dependencies = {
-    "kyazdani42/nvim-web-devicons"
+    "kyazdani42/nvim-web-devicons",
   },
   config = function()
-    local icon = require('retro-theme.icons')
+    local icon = require("retro-theme.icons")
 
     local filetype = { "filetype", icon_only = true }
 
@@ -44,18 +44,18 @@ return {
       always_visible = false,
     }
 
-    require('lualine').setup({
+    require("lualine").setup({
       options = {
         icons_enabled = true,
-        theme = 'auto',
+        theme = "auto",
         globalstatus = true,
         component_separators = {
           left = "",
-          right = ""
+          right = "",
         },
         section_separators = {
           left = "",
-          right = ""
+          right = "",
         },
         disabled_filetypes = { statusline = { "lazy" } },
       },
@@ -65,8 +65,8 @@ return {
         lualine_c = { "filename", "kulala" },
         lualine_x = { "encoding", "fileformat", "branch", diff, diagnostics, filetype },
         lualine_y = { "progress" },
-        lualine_z = { "location" }
+        lualine_z = { "location" },
       },
     })
-  end
+  end,
 }

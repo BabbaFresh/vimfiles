@@ -4,7 +4,7 @@ return {
     require("flash").setup({
       modes = {
         char = { enabled = false },
-      }
+      },
     })
-  end
+  end,
 }
