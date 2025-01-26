@@ -30,8 +30,6 @@ require("lazy").setup({
   require("plugins.config.tiny-code-action-nvim"),
   -- Show LSP diagnostics
   require("plugins.config.trouble-nvim"),
-  -- Nicer messages and commandline
-  require("plugins.config.noice-nvim"),
   -- Navigate code on steroids with flash.nvim ⚡
   require("plugins.config.flash-nvim"),
   -- This is 🔥 github copilot
