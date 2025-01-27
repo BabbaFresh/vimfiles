@@ -45,7 +45,7 @@ return {
       { "<leader>gnp", "<Cmd>lua require('ndoo').pulls()<CR>", desc = "Pulls" },
       { "<leader>gnr", "<Cmd>lua require('ndoo').repo()<CR>", desc = "Repo" },
       { "<leader>gr", "<Cmd>lua require('telescope.builtin').lsp_references()<CR>", desc = "References" },
-      { "<leader>gR", "<Cmd>lua vim.lsp.buf.rename()<CR>", desc = "References" },
+      { "<leader>gR", "<Cmd>lua vim.lsp.buf.rename()<CR>", desc = "Rename" },
       { "<leader>gs", group = "Symbols" },
       { "<leader>gsd", "<Cmd>lua require('telescope.builtin').lsp_document_symbols()<CR>", desc = "Document Symbols" },
       {
