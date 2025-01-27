@@ -77,5 +77,11 @@ return {
       { "<leader>c", group = "Code" },
       { "<leader>ca", "<cmd>lua require('tiny-code-action').code_action()<CR>", desc = "Actions" },
     })
+
+    wk.add({
+      mode = { "n" },
+      { "<leader>z", group = "Zen" },
+      { "<leader>zz", "<cmd>:ZenMode<CR>", desc = "ZenMode" },
+    })
   end,
 }
