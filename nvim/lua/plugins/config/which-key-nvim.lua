@@ -60,6 +60,13 @@ return {
       mode = { "n" },
       { "<leader>d", group = "Debug" },
       {
+        "<leader>dt",
+        "<cmd>TodoTrouble<cr>",
+        desc = "ToDo",
+        icon = "",
+      },
+      { "<leader>d", group = "Debug" },
+      {
         "<leader>dd",
         "<cmd>lua require('trouble').toggle({ mode = 'diagnostics', filter = { buf = 0 } })<cr>",
         desc = "Document Diagnostics",
