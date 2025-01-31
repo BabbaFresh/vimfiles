@@ -22,6 +22,7 @@ return {
       "html",
       "intelephense",
       "jsonls",
+      "kulala_ls",
       "lua_ls",
       "pyright",
       "rust_analyzer",
