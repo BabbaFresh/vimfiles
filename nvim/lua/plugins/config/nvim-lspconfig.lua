@@ -3,14 +3,7 @@ return {
   config = function()
     local nvim_lsp = require("lspconfig")
 
-    vim.api.nvim_command("inoremap <C-n> <C-x><C-o>")
-
-    -- Set up Blink.cmp-compatible capabilities
-    local blink = require("blink.cmp")
     local capabilities = vim.lsp.protocol.make_client_capabilities()
-
-    -- Use Blink.cmp's capabilities enhancement (replace cmp_nvim_lsp)
-    -- capabilities = blink.update_capabilities(capabilities)
 
     -- List of LSP servers to configure
     local servers = {
