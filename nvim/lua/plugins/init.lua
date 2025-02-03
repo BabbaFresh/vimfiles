@@ -20,6 +20,8 @@ require("lazy").setup({
   -- A tiny Neovim plugin that adds subtle animations to
   -- various operations.
   require("plugins.config.tiny-glimmer-nvim"),
+  -- Visualize and work with indent scope
+  require("plugins.config.mini-indentscope"),
   -- Neovim development for the lazy
   -- Causing issues for me at the moment
   -- require("plugins.config.lazydev-nvim"),
