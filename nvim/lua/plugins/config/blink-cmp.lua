@@ -4,6 +4,13 @@ return {
   build = "cargo build --release",
   version = "*",
 
+  dependencies = {
+    {
+      "Kaiser-Yang/blink-cmp-git",
+      dependencies = { "nvim-lua/plenary.nvim" },
+    },
+  },
+
   ---@module 'blink.cmp'
   ---@type blink.cmp.Config
   opts = {
@@ -36,6 +43,14 @@ return {
         "lsp",
         "path",
         "buffer",
+        "git",
+      },
+      providers = {
+        git = {
+          module = "blink-cmp-git",
+          name = "Git",
+          opts = {},
+        },
       },
     },
   },
