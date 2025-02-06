@@ -6,7 +6,9 @@ map("", "k", "gk")
 
 -- Save
 map("n", "<leader>w", ":w<CR>")
-map("n", "<leader>q", ":q<CR>")
+
+-- Quit out of buffer
+map("n", "<leader>q", ":bd!<CR>")
 
 -- Replacement for ctrlp
 map("n", "<C-p>", ":Telescope find_files<CR>")
