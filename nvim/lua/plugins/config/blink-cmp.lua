@@ -26,8 +26,15 @@ return {
       },
     },
     completion = {
+      menu = {
+        border = "rounded",
+        draw = { gap = 2 },
+      },
       -- Show documentation when selecting a completion item
-      documentation = { auto_show = true, auto_show_delay_ms = 500 },
+      documentation = {
+        auto_show = true,
+        auto_show_delay_ms = 250,
+      },
     },
 
     appearance = {
