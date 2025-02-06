@@ -10,11 +10,11 @@ map("n", "<leader>w", ":w<CR>")
 -- Save and quit buffer
 map("n", "<leader>wq", ":wq<CR>")
 
--- Save and quit Neovim
-map("n", "<leader>q", ":wqall!<CR>")
-
 -- Quit out of buffer
-map("n", "<leader>x", ":bd!<CR>")
+map("n", "<leader>q", ":bd!<CR>")
+
+-- Save and quit Neovim
+map("n", "<leader>x", ":wqall!<CR>")
 
 -- Replacement for ctrlp
 map("n", "<C-p>", ":Telescope find_files<CR>")
