@@ -3,15 +3,18 @@
 # Language Servers
 
 npm install -g \
+@mistweaverco/kulala-ls \
 @prisma/language-server \
 @tailwindcss/language-server \
 bash-language-server \
 diagnostic-languageserver \
 dockerfile-language-server-nodejs \
+eslint \
 intelephense \
 pyright \
 sql-language-server \
 svelte-language-server \
+typescript \
 typescript-language-server \
 vim-language-server \
 vscode-langservers-extracted \
