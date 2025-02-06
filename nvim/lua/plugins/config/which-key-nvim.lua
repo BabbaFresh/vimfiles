@@ -13,27 +13,27 @@ return {
     wk.add({
       {
         mode = { "v" },
-        { "<leader>g", group = "Goto" },
-        { "<leader>gn", group = "ndoo" },
-        { "<leader>gnO", "<Cmd>lua require('ndoo').open({ v = true, commit = true })<CR>", desc = "Open commit" },
-        { "<leader>gno", "<Cmd>lua require('ndoo').open({ v = true })<CR>", desc = "Open" },
+        { "<leader>a", group = "Git 🐙" },
+        { "<leader>as", group = "ndoo 🥷" },
+        { "<leader>asO", "<Cmd>lua require('ndoo').open({ v = true, commit = true })<CR>", desc = "Open commit" },
+        { "<leader>aso", "<Cmd>lua require('ndoo').open({ v = true })<CR>", desc = "Open" },
       },
     })
 
     wk.add({
       mode = { "n" },
-      { "<leader>G", group = "Git 🐙" },
-      { "<leader>Gb", "<Cmd>BlameToggle window<CR>", desc = "Blame 😠" },
-      { "<leader>Gn", "<Cmd>Neogit<CR>", desc = "Neogit 🥷" },
-      { "<leader>GN", group = "ndoo" },
-      { "<leader>GNO", "<Cmd>lua require('ndoo').open({ commit = true })<CR>", desc = "Open commit" },
-      { "<leader>GNa", "<Cmd>lua require('ndoo').pipelines()<CR>", desc = "Pipelines" },
-      { "<leader>GNc", "<Cmd>lua require('ndoo').commit()<CR>", desc = "Commit" },
-      { "<leader>GNi", "<Cmd>lua require('ndoo').issues()<CR>", desc = "Issues" },
-      { "<leader>GNl", "<Cmd>lua require('ndoo').labels()<CR>", desc = "Labels" },
-      { "<leader>GNo", "<Cmd>lua require('ndoo').open()<CR>", desc = "Open" },
-      { "<leader>GNp", "<Cmd>lua require('ndoo').pulls()<CR>", desc = "Pulls" },
-      { "<leader>GNr", "<Cmd>lua require('ndoo').repo()<CR>", desc = "Repo" },
+      { "<leader>a", group = "Git 🐙" },
+      { "<leader>ab", "<Cmd>BlameToggle window<CR>", desc = "Blame 😠" },
+      { "<leader>aa", "<Cmd>Neogit<CR>", desc = "Neogit 🥷" },
+      { "<leader>as", group = "ndoo 🥷" },
+      { "<leader>asO", "<Cmd>lua require('ndoo').open({ commit = true })<CR>", desc = "Open commit" },
+      { "<leader>asa", "<Cmd>lua require('ndoo').pipelines()<CR>", desc = "Pipelines" },
+      { "<leader>asc", "<Cmd>lua require('ndoo').commit()<CR>", desc = "Commit" },
+      { "<leader>asi", "<Cmd>lua require('ndoo').issues()<CR>", desc = "Issues" },
+      { "<leader>asl", "<Cmd>lua require('ndoo').labels()<CR>", desc = "Labels" },
+      { "<leader>aso", "<Cmd>lua require('ndoo').open()<CR>", desc = "Open" },
+      { "<leader>asp", "<Cmd>lua require('ndoo').pulls()<CR>", desc = "Pulls" },
+      { "<leader>asr", "<Cmd>lua require('ndoo').repo()<CR>", desc = "Repo" },
     })
 
     wk.add({
