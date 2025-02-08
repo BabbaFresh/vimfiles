@@ -4,6 +4,10 @@ vim.filetype.add({
   },
   filename = {
     ["tsconfig.json"] = "jsonc",
-    [".env"] = "bash",
+    [".env"] = "env",
+  },
+  pattern = {
+    -- This will match .env.*, like .env.local, .env.production, etc.
+    [".env.*"] = "env",
   },
 })
