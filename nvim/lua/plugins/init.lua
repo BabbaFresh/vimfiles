@@ -14,6 +14,8 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Install Plugins
 require("lazy").setup({
+  -- Zana, the missing package manager for Neovim
+  require("plugins.config.zana-nvim"),
   -- Zen mode
   -- A distraction-free coding mode for Neovim
   require("plugins.config.zen-mode-nvim"),
