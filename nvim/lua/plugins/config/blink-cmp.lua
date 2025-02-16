@@ -18,10 +18,13 @@ return {
     -- 'super-tab' for mappings similar to vscode (tab to accept, arrow keys to navigate)
     -- 'enter' for mappings similar to 'super-tab' but with 'enter' to accept
     -- See the full "keymap" documentation for information on defining your own keymap.
+    --
     keymap = {
       preset = "default",
       ["<CR>"] = { "select_and_accept", "fallback" },
-      cmdline = {
+    },
+    cmdline = {
+      keymap = {
         preset = "default",
       },
     },
