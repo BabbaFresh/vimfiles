@@ -53,6 +53,10 @@
       "version": "2.3.1"
     },
     {
+      "sourceId": "pkg:npm/vscode-langservers-extracted",
+      "version": "4.10.0"
+    },
+    {
       "sourceId": "pkg:npm/yaml-language-server",
       "version": "1.16.0"
     }
