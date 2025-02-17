@@ -22,8 +22,8 @@ require("lazy").setup({
   -- A tiny Neovim plugin that adds subtle animations to
   -- various operations.
   require("plugins.config.tiny-glimmer-nvim"),
-  -- 💥 Noice (Nice, Noise, Notice)
-  require("plugins.config.noice-nvim"),
+  -- Uzuri 🦄 - beautiful ui inputs and notifications
+  require("plugins.config.uzuri-nvim"),
   -- Visualize and work with indent scope
   require("plugins.config.mini-indentscope"),
   -- Neovim development for the lazy
